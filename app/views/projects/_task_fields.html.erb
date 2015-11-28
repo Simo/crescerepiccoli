@@ -1,0 +1,35 @@
+<fieldset class="nested-fields">
+<div class="field">
+  <%= f.label :project_id %><br>
+  <%= f.number_field :project_id %>
+</div>
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :description %><br>
+  <%= f.text_field :description %>
+</div>
+<div class="field">
+  <%= f.label :started_at %><br>
+  <%= f.date_select :started_at %>
+</div>
+<div class="field">
+  <%= f.label :finished_at %><br>
+  <%= f.date_select :finished_at %>
+</div>
+<div class="field">
+  <%= f.label :notes %><br>
+  <%= f.text_field :notes %>
+</div>
+  <div>
+    <%= f.fields_for :pictures do |builder| %>
+        <%= render 'picture_fields', :f => builder %>
+    <% end %>
+    <%= link_to_add_association 'Aggiungi immagine', f, :pictures %>
+  </div>
+  <div>
+    <div><%= link_to_remove_association "Rimuovi attivita", f %></div>
+  </div>
+</fieldset>

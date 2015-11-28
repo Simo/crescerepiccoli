@@ -1,0 +1,17 @@
+<fieldset class="nested-fields">
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br>
+    <%= f.file_field :image %>
+  </div>
+  <div>
+    <div><%= link_to_remove_association "Rimuovi immagine", f %></div>
+  </div>
+</fieldset>

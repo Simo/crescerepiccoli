@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js"> <!--<![endif]-->
+<head>
+  <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Scuola materna Mons.Castellani - <%= yield :title %></title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<!--wrapper starts-->
+<div class="wrapper">
+    <%= render 'application/header'%>
+    <%= yield %>
+    <%= render 'application/footer' %>
+</div>
+<!--wrapper ends-->
+<a href="" title="Go to Top" class="back-to-top">Torna in alto ↑</a>
+</body>
+</html>

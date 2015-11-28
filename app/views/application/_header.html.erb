@@ -1,0 +1,40 @@
+<!--header starts-->
+<header>
+  <div class="container">
+    <div class="logo">
+      <a href="index.html" title="Kids Life"><img src="<%= asset_path 'images/logo.JPG' %>" alt="Kids Life" title="Kids Life"></a>
+    </div>
+    <div class="contact-details">
+      <p class="mail">
+        <a href="#">scuolainfanzia@crescerepiccoli.it</a>
+        <span class="fa fa-envelope"></span>
+      </p>
+      <p class="phone-no">
+        <i>0432 987238</i>
+        <span class="fa fa-phone"></span>
+      </p>
+    </div>
+  </div>
+  <!--menu-container starts-->
+  <div id="menu-container">
+    <div class="container">
+      <!--nav starts-->
+      <nav id="main-menu">
+        <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
+        <ul id="menu-main-menu" class="menu">
+          <%= render @menu_items %>
+        </ul>
+      </nav>
+      <!--nav ends-->
+
+      <ul class="dt-sc-social-icons">
+        <li><a href="#" title="Facebook" class="dt-sc-tooltip-top facebook"><span class="fa fa-facebook"></span></a></li>
+        <li><a href="#" title="Youtube" class="dt-sc-tooltip-top youtube"><span class="fa fa-youtube"></span></a></li>
+        <li><a href="#" title="Twitter" class="dt-sc-tooltip-top twitter"><span class="fa fa-twitter"></span></a></li>
+        <li><a href="#" title="Google Plus" class="dt-sc-tooltip-top gplus"><span class="fa fa-google-plus"></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!--menu-container ends-->
+</header>
+<!--header ends-->

@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @task.project_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @task.description %>
+</p>
+
+<p>
+  <strong>Started at:</strong>
+  <%= @task.started_at %>
+</p>
+
+<p>
+  <strong>Finished at:</strong>
+  <%= @task.finished_at %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @task.notes %>
+</p>
+
+<p>
+  <strong>Images:</strong>
+  <% @task.pictures.each do |picture| %>
+      <%= image_tag picture.image.thumb.to_s -%>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
