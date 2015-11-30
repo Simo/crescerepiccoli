@@ -16,4 +16,5 @@
  *= require css/font-awesome.min.css.erb
  *= require css/layerslider
  *= require css/prettyPhoto.css.erb
+ *= require_self
  */
