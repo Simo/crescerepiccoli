@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @breadcrumb.title %>
+</p>
+
+<p>
+  <strong>Menu item:</strong>
+  <%= @breadcrumb.menu_item_id %>
+</p>
+
+<p>
+  <strong>Visible:</strong>
+  <%= @breadcrumb.visible %>
+</p>
+
+<%= link_to 'Edit', edit_breadcrumb_path(@breadcrumb) %> |
+<%= link_to 'Back', breadcrumbs_path %>

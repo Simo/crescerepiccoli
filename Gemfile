@@ -36,6 +36,9 @@ gem 'cocoon'
 # Use high_voltage for static pages
 gem 'high_voltage', '~> 2.4.0'
 
+# Use Geocoder for geolocate events
+gem 'geocoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

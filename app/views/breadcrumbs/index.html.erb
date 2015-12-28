@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Breadcrumbs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Menu item</th>
+      <th>Visible</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @breadcrumbs.each do |breadcrumb| %>
+      <tr>
+        <td><%= breadcrumb.title %></td>
+        <td><%= breadcrumb.menu_item_id %></td>
+        <td><%= breadcrumb.visible %></td>
+        <td><%= link_to 'Show', breadcrumb %></td>
+        <td><%= link_to 'Edit', edit_breadcrumb_path(breadcrumb) %></td>
+        <td><%= link_to 'Destroy', breadcrumb, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Breadcrumb', new_breadcrumb_path %>

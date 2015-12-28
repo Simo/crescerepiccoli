@@ -202,9 +202,9 @@ jQuery(document).ready(function($){
 	if( $map.length ) {
 		$map.gMap({
 			scrollwheel: false,
-			address: 'No: 58 A, East Madison St, Baltimore, MD, USA',
-			zoom: 16,
-			markers: [ { 'address' : 'No: 58 A, East Madison St, Baltimore, MD, USA' } ]
+			address: 'Via Mortinas, 26, 33011 Artegna UD',
+			zoom: 13,
+			markers: [ { 'address' : 'Via Mortinas, 26, 33011 Artegna UD' } ]
 		});
 	}
 	

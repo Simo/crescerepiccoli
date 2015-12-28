@@ -35,6 +35,15 @@
 <!--wrapper ends-->
 <a href="" title="Go to Top" class="back-to-top">To Top ↑</a>
 <%# render 'application/javascripts' %>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    if(jQuery(".add-slider, .portfolio-slider, .about-slider").length) {
+      jQuery('.add-slider, .portfolio-slider, .about-slider').bxSlider({
+        auto:false, video:false, useCSS:false, pager:'true', autoHover:true, adaptiveHeight:true
+      });
+    }
+  });
+</script>
 <script type="text/javascript">var lsjQuery = jQuery;</script>
 <script type="text/javascript">var lsjQuery = jQuery;</script><script type="text/javascript"> lsjQuery(document).ready(function() { if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1','jquery'); } else { lsjQuery("#layerslider_4").layerSlider({responsiveUnder: 1170, layersContainer: 1170, skinsPath: 'js/layerslider/skins/'}) } }); </script>
 </body>

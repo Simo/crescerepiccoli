@@ -8,4 +8,8 @@ module ApplicationHelper
     'current_page_item' if controller.controller_name == name
   end
 
+  def current_breadcrumb name
+    true if controller.controller_name == name
+  end
+
 end

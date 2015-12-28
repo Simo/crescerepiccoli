@@ -1,0 +1,29 @@
+<%= form_for(@breadcrumb) do |f| %>
+  <% if @breadcrumb.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@breadcrumb.errors.count, "error") %> prohibited this breadcrumb from being saved:</h2>
+
+      <ul>
+      <% @breadcrumb.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :menu_item_id %><br>
+    <%= f.select :menu_item_id, MenuItem.all.collect { |p| [ p.label, p.id ] }%>
+  </div>
+  <div class="field">
+    <%= f.label :visible %><br>
+    <%= f.text_field :visible %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

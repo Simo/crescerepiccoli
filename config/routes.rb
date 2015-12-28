@@ -1,21 +1,26 @@
 Rails.application.routes.draw do
 
+  resources :events, path: 'eventi'
+  resources :menu_items
+  resources :breadcrumbs
+
   devise_for :users
-  get 'orari/index', as: 'orari'
 
-  get 'scuola/index', as: 'scuola'
+  get 'servizi', to: 'servizi#index'
 
-  get 'storia/index', as: 'storia'
+  get 'orari', to: 'orari#index'
+
+  get 'scuola', to: 'scuola#index'
+
+  get 'storia', to: 'storia#index'
 
   resources :tasks do
     resources :pictures
   end
 
-  resources :projects do
+  resources :projects, path: 'progetti' do
     resources :tasks
   end
-
-  get 'home/index', as: 'home'
 
   root 'home#index'
 

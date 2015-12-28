@@ -1,14 +1,50 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<!--[if IE 7 ]>    <html lang="en-gb" class="isie ie7 oldie no-js"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-gb" class="isie ie8 oldie no-js"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-gb" class="isie ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en-gb" class="no-js"> <!--<![endif]-->
 <head>
-  <title><%= yield :title %></title>
+  <meta http-equiv="content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>Scuola materna Mons.Castellani - <%= yield :title %></title>
+  <meta name="description" content="">
+  <meta name="author" content="Simone Bierti">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <!--Fonts-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bubblegum+Sans' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
-<body>
-
-<%= yield %>
-
+<body class="main">
+<% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, id: "flash_#{name}" %>
+<% end %>
+<!--wrapper starts-->
+<div class="wrapper">
+  <%= render 'application/header' %>
+  <%= yield %>
+  <%= render 'application/footer' %>
+</div>
+<!--wrapper ends-->
+<a href="" title="Go to Top" class="back-to-top">To Top ↑</a>
+<%# render 'application/javascripts' %>
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    if(jQuery(".add-slider, .portfolio-slider, .about-slider").length) {
+      jQuery('.add-slider, .portfolio-slider, .about-slider').bxSlider({
+        auto:false, video:false, useCSS:false, pager:'true', autoHover:true, adaptiveHeight:true
+      });
+    }
+  });
+</script>
+<script type="text/javascript">var lsjQuery = jQuery;</script>
+<script type="text/javascript">var lsjQuery = jQuery;</script><script type="text/javascript"> lsjQuery(document).ready(function() { if(typeof lsjQuery.fn.layerSlider == "undefined") { lsShowNotice('layerslider_1','jquery'); } else { lsjQuery("#layerslider_4").layerSlider({responsiveUnder: 1170, layersContainer: 1170, skinsPath: 'js/layerslider/skins/'}) } }); </script>
 </body>
 </html>

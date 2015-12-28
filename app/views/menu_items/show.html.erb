@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Label:</strong>
+  <%= @menu_item.label %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @menu_item.reference %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @menu_item.color %>
+</p>
+
+<p>
+  <strong>Href:</strong>
+  <%= @menu_item.href %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @menu_item.active %>
+</p>
+
+<p>
+  <strong>Priority:</strong>
+  <%= @menu_item.priority %>
+</p>
+
+<%= link_to 'Edit', edit_menu_item_path(@menu_item) %> |
+<%= link_to 'Back', menu_items_path %>

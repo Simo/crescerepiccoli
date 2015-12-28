@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151206212441) do
+ActiveRecord::Schema.define(version: 20151210160721) do
+
+  create_table "breadcrumbs", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "menu_item_id"
+    t.string   "visible"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string   "titolo"
+    t.string   "descrizione"
+    t.date     "quando"
+    t.time     "ora"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "menu_items", force: :cascade do |t|
     t.string   "label"
@@ -20,6 +40,8 @@ ActiveRecord::Schema.define(version: 20151206212441) do
     t.string   "href"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date     "active"
+    t.integer  "priority"
   end
 
   create_table "pictures", force: :cascade do |t|
@@ -44,6 +66,7 @@ ActiveRecord::Schema.define(version: 20151206212441) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "priority"
+    t.date     "active"
   end
 
   create_table "tasks", force: :cascade do |t|
