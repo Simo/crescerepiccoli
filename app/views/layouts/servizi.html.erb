@@ -26,7 +26,12 @@
 <!--wrapper starts-->
 <div class="wrapper">
     <%= render 'application/header' %>
-    <%= yield %>
+    <!--main starts-->
+    <div id="main">
+      <%= render 'application/breadcrumbs' %>
+      <%= yield %>
+    </div>
+    <!--main ends-->
     <%= render 'application/footer' %>
 </div>
 <!--wrapper ends-->

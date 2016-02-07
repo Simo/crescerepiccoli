@@ -1,12 +1,18 @@
-<!--breadcrumb-section starts-->
- <div class="breadcrumb-section">
-   <div class="container">
-     <h1>La Scuola e i suoi spazi</h1>
-     <div class="breadcrumb">
-       <a href="index.html">Home</a>
-       <span class="fa fa-angle-double-right"></span>
-       <span class="current">Columns</span>
-     </div>
-   </div>
- </div>
- <!--breadcrumb-section ends-->
+<% @menu_items.each do |menu_item|%>
+    <% if current_breadcrumb menu_item.reference %>
+        <% if menu_item.breadcrumb.visible == "1" %>
+          <!--breadcrumb-section starts-->
+           <div class="breadcrumb-section">
+             <div class="container">
+               <h1><%= menu_item.breadcrumb.title %></h1>
+               <div class="breadcrumb">
+                 <a href="index.html">Home</a>
+                 <span class="fa fa-angle-double-right"></span>
+                 <span class="current"><%= menu_item.label %></span>
+               </div>
+             </div>
+           </div>
+           <!--breadcrumb-section ends-->
+        <% end %>
+    <% end %>
+<% end %>
