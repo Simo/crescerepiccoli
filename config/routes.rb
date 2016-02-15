@@ -6,6 +6,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'comitatomamme', to: 'comitatomamme#index'
+
+  get 'comunicazioni', to: 'comunicazioni#index'
+
+  get 'documenti', to: 'documenti#index'
+
   get 'servizi', to: 'servizi#index'
 
   get 'orari', to: 'orari#index'

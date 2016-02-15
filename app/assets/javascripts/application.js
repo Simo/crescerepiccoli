@@ -13,6 +13,7 @@
 //= require js/modernizr-2.6.2.min
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui
 //= require turbolinks
 //= require cocoon
 //= require js/jquery-migrate.min
