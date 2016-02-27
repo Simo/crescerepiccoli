@@ -40,6 +40,6 @@ Rails.application.configure do
   # config.action_view.raise_on_missing_translations = true
 
   #config.assets.prefix = "/dev-assets"
-
-  config.serve_static_files = true
+  #in produzione deve essere a false per lasciare il compito al webserver
+  config.serve_static_files = false
 end

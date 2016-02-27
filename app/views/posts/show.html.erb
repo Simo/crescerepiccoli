@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Autore:</strong>
+  <%= @post.autore %>
+</p>
+
+<p>
+  <strong>Titolo:</strong>
+  <%= @post.titolo %>
+</p>
+
+<p>
+  <strong>Estratto:</strong>
+  <%= @post.estratto %>
+</p>
+
+<p>
+  <strong>Corpo:</strong>
+  <%= @post.corpo %>
+</p>
+
+<p>
+  <strong>Esteso:</strong>
+  <%= @post.esteso %>
+</p>
+
+<p>
+  <strong>Bozza:</strong>
+  <%= @post.bozza %>
+</p>
+
+<p>
+  <strong>Pubblicato:</strong>
+  <%= @post.pubblicato %>
+</p>
+
+<p>
+  <strong>Cancellato:</strong>
+  <%= @post.cancellato %>
+</p>
+
+<p>
+  <strong>Categoria:</strong>
+  <%= @post.categoria %>
+</p>
+
+<p>
+  <strong>Tipo:</strong>
+  <%= @post.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

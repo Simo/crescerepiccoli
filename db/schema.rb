@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151210160721) do
+ActiveRecord::Schema.define(version: 20160217211651) do
 
   create_table "breadcrumbs", force: :cascade do |t|
     t.string   "title"
@@ -55,6 +55,21 @@ ActiveRecord::Schema.define(version: 20151210160721) do
   end
 
   add_index "pictures", ["uploadable_id", "uploadable_type"], name: "index_pictures_on_uploadable_id_and_uploadable_type"
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "autore"
+    t.string   "titolo"
+    t.string   "estratto"
+    t.text     "corpo"
+    t.text     "esteso"
+    t.date     "bozza"
+    t.date     "pubblicato"
+    t.date     "cancellato"
+    t.string   "categoria"
+    t.string   "tipo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string   "title"

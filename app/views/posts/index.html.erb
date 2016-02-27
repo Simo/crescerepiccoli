@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Posts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Autore</th>
+      <th>Titolo</th>
+      <th>Estratto</th>
+      <th>Corpo</th>
+      <th>Esteso</th>
+      <th>Bozza</th>
+      <th>Pubblicato</th>
+      <th>Cancellato</th>
+      <th>Categoria</th>
+      <th>Tipo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @posts.each do |post| %>
+      <tr>
+        <td><%= post.autore %></td>
+        <td><%= post.titolo %></td>
+        <td><%= post.estratto %></td>
+        <td><%= post.corpo %></td>
+        <td><%= post.esteso %></td>
+        <td><%= post.bozza %></td>
+        <td><%= post.pubblicato %></td>
+        <td><%= post.cancellato %></td>
+        <td><%= post.categoria %></td>
+        <td><%= post.tipo %></td>
+        <td><%= link_to 'Show', post %></td>
+        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Post', new_post_path %>

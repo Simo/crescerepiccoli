@@ -1,0 +1,23 @@
+/*
+ 
+ jQuery Tools 1.2.5 Tabs- The basics of UI design.
+
+ NO COPYRIGHTS OR LICENSES. DO WHAT YOU LIKE.
+
+ http://flowplayer.org/tools/tabs/
+
+ Since: November 2008
+ Date:    Wed Sep 22 06:02:10 2010 +0000 
+*/
+!function(e){function t(t,i,o){var s,r=this,a=t.add(this),l=t.find(o.tabs),c=i.jquery?i:t.children(i);l.length||(l=t.children()),c.length||(c=t.parent().find(i)),c.length||(c=e(i)),e.extend(this,{click:function(t,i){var c=l.eq(t);if("string"==typeof t&&t.replace("#","")&&(c=l.filter("[href*="+t.replace("#","")+"]"),t=Math.max(l.index(c),0)),o.rotate){var u=l.length-1;if(0>t)return r.click(u,i);if(t>u)return r.click(0,i)}if(!c.length){if(s>=0)return r;t=o.initialIndex,c=l.eq(t)}return t===s?r:(i=i||e.Event(),i.type="onBeforeClick",a.trigger(i,[t]),i.isDefaultPrevented()?void 0:(n[o.effect].call(r,t,function(){i.type="onClick",a.trigger(i,[t])}),s=t,l.removeClass(o.current),c.addClass(o.current),r))},getConf:function(){return o},getTabs:function(){return l},getPanes:function(){return c},getCurrentPane:function(){return c.eq(s)},getCurrentTab:function(){return l.eq(s)},getIndex:function(){return s},next:function(){return r.click(s+1)},prev:function(){return r.click(s-1)},destroy:function(){return l.unbind(o.event).removeClass(o.current),c.find("a[href^=#]").unbind("click.T"),r}}),e.each("onBeforeClick,onClick".split(","),function(t,i){e.isFunction(o[i])&&e(r).bind(i,o[i]),r[i]=function(t){return t&&e(r).bind(i,t),r}}),o.history&&e.fn.history&&(e.tools.history.init(l),o.event="history"),l.each(function(t){e(this).bind(o.event,function(e){return r.click(t,e),e.preventDefault()})}),c.find("a[href^=#]").bind("click.T",function(t){r.click(e(this).attr("href"),t)}),location.hash&&"a"==o.tabs&&t.find("[href="+location.hash+"]").length?r.click(location.hash):(0===o.initialIndex||o.initialIndex>0)&&r.click(o.initialIndex)}e.tools=e.tools||{version:"1.2.5"},e.tools.tabs={conf:{tabs:"a",current:"current",onBeforeClick:null,onClick:null,effect:"default",initialIndex:0,event:"click",rotate:!1,history:!1},addEffect:function(e,t){n[e]=t}};var i,n={"default":function(e,t){this.getPanes().hide().eq(e).show(),t.call()},fade:function(e,t){var i=this.getConf(),n=i.fadeOutSpeed,o=this.getPanes();n?o.fadeOut(n):o.hide(),o.eq(e).fadeIn(i.fadeInSpeed,t)},slide:function(e,t){this.getPanes().slideUp(200),this.getPanes().eq(e).slideDown(400,t)},ajax:function(e,t){this.getPanes().eq(0).load(this.getTabs().eq(e).attr("href"),t)}};e.tools.tabs.addEffect("horizontal",function(t,n){i||(i=this.getPanes().eq(0).width()),this.getCurrentPane().animate({width:0},function(){e(this).hide()}),this.getPanes().eq(t).animate({width:i},function(){e(this).show(),n.call()})}),e.fn.tabs=function(i,n){var o=this.data("tabs");return o&&(o.destroy(),this.removeData("tabs")),e.isFunction(n)&&(n={onBeforeClick:n}),n=e.extend({},e.tools.tabs.conf,n),this.each(function(){o=new t(e(this),i,n),e(this).data("tabs",o)}),n.api?o:this}}(jQuery),/*
+ 
+ jQuery Tools 1.2.5 Slideshow - Extend it.
+
+ NO COPYRIGHTS OR LICENSES. DO WHAT YOU LIKE.
+
+ http://flowplayer.org/tools/tabs/slideshow.html
+
+ Since: September 2009
+ Date:    Wed Sep 22 06:02:10 2010 +0000 
+*/
+function(e){function t(t,i){function n(i){var n=e(i);return n.length<2?n:t.parent().find(i)}function o(){s=setTimeout(l.next,i.interval),l.onClick(function(e){null==e.originalEvent&&(s=clearTimeout(s),s=setTimeout(l.next,i.interval))})}var s,r=this,a=t.add(this),l=t.data("tabs"),c=!0,u=n(i.next).click(function(){l.next()}),d=n(i.prev).click(function(){l.prev()});if(e.extend(r,{getTabs:function(){return l},getConf:function(){return i},play:function(){if(s)return r;var t=e.Event("onBeforePlay");return a.trigger(t),t.isDefaultPrevented()?r:(o(),c=!1,a.trigger("onPlay"),r)},pause:function(){if(!s)return r;var t=e.Event("onBeforePause");return a.trigger(t),t.isDefaultPrevented()?r:(s=clearTimeout(s),a.trigger("onPause"),r)},stop:function(){r.pause(),c=!0}}),e.each("onBeforePlay,onPlay,onBeforePause,onPause".split(","),function(t,n){e.isFunction(i[n])&&e(r).bind(n,i[n]),r[n]=function(t){return e(r).bind(n,t)}}),i.autopause&&l.getTabs().add(u).add(d).add(l.getPanes()).hover(r.pause,function(){c||r.play()}),i.autoplay&&r.play(),i.clickable&&l.getPanes().click(function(){l.next()}),!l.getConf().rotate){var h=i.disabledClass;l.getIndex()||d.addClass(h),l.onBeforeClick(function(e,t){d.toggleClass(h,!t),u.toggleClass(h,t==l.getTabs().length-1)})}}var i;i=e.tools.tabs.slideshow={conf:{next:".forward",prev:".backward",disabledClass:"disabled",autoplay:!1,autopause:!0,interval:3e3,clickable:!0,api:!1}},e.fn.slideshow=function(n){var o=this.data("slideshow");return o?o:(n=e.extend({},i.conf,n),this.each(function(){o=new t(e(this),n),e(this).data("slideshow",o)}),n.api?o:this)}}(jQuery);
