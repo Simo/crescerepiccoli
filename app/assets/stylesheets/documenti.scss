@@ -1,3 +1,12 @@
 // Place all the styles related to the documenti controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.dt-sc-testimonial blockquote.burnt-orange::after {
+  border-color: #cf571b transparent transparent !important;
+}
+.dt-sc-testimonial blockquote.blue::after {
+  border-color: #73d5f0 transparent transparent !important;
+}
+.dt-sc-testimonial blockquote.green::after {
+  border-color: #7aa127 transparent transparent !important;
+}

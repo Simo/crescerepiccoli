@@ -3,97 +3,57 @@
   <!--primary starts-->
   <section id="primary" class="content-full-width">
 
-    <h2 class="dt-sc-hr-green-title"> Servizi alle famiglie </h2>
-    <div class="dt-sc-hr"></div>
-
-    <div class="column dt-sc-one-third first">
-      <div class="dt-sc-ico-content type3">
-        <div class="icon">
-          <span class="fa fa-smile-o"> </span>
-        </div>
-        <h4><a href="#" target="_blank"> Pre&Post Accoglienza </a></h4>
-        <p>Nunc at pretium est curabitur commodo leac est venenatis egestas sed aliquet auguevelit. Curabitur vulputate, ligula lacinia scelerisque</p>
-      </div>
-    </div>
-
-    <div class="column dt-sc-one-third">
-      <div class="dt-sc-ico-content type3">
-        <div class="icon">
-          <span class="fa fa-sun-o"> </span>
-        </div>
-        <h4><a href="#" target="_blank"> Mensa </a></h4>
-        <p>La scuola dispone di un servizio mensa interno con cucina attrezzata dove quotidianamente vengono preparati i pasti secondo le disposizioni dell’A.S.S. 3 Alto Friuli. Il menù è stagionale e suddiviso su 8 settimane. <span  id="servizioMensa" class="linkPiccolo">Leggi di piu'</span></p>
-      </div>
-    </div>
-
-    <div class="column dt-sc-one-third">
-      <div class="dt-sc-ico-content type3">
-        <div class="icon" id="fermateScuolabus">
-          <span class="fa fa-cog"> </span>
-        </div>
-        <h4><a href="#" target="_blank"> Scuolabus </a></h4>
-        <p>La nostra scuola dell’infanzia garantisce il servizio scuolabus gratuito, da e per la scuola, ai bambini delle famiglie che ne fanno richiesta esclusivamente sul territorio comunale di Artegna</p>
-      </div>
-    </div>
+    <%= render 'servizi' %>
 
     <div class="dt-sc-hr"></div>
 
-    <h2 class="dt-sc-hr-green-title"> Attivit&agrave; per i bambini </h2>
-
-    <div class="column dt-sc-one-fourth first">
-      <div class="activity box1">
-        <h4> Laboratori Didattici </h4>
-        <img src="<%= asset_path 'images/activity1.jpg' %>" alt="" title="">
-        <p>Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus Et Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu</p>
-      </div>
-    </div>
-
-    <div class="column dt-sc-one-fourth">
-      <div class="activity box2">
-        <h4> Laboratori Creativi </h4>
-        <img src="<%= asset_path 'images/activity2.jpg' %>" alt="" title="">
-        <p>Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus Et Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu</p>
-      </div>
-    </div>
-
-    <div class="column dt-sc-one-fourth">
-      <div class="activity box3">
-        <h4> Laboratori Musicali </h4>
-        <img src="<%= asset_path 'images/activity3.jpg' %>" alt="" title="">
-        <p>Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus Et Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu</p>
-      </div>
-    </div>
-
-    <div class="column dt-sc-one-fourth">
-      <div class="activity box4">
-        <h4> Attivit&agrave; extrascolastiche </h4>
-        <img src="<%= asset_path 'images/activity4.jpg' %>" alt="" title="">
-        <p>Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus Et Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu</p>
-      </div>
-    </div>
+    <%= render 'attivita' %>
 
   </section>
   <!--primary ends-->
 </div>
 <!--container ends-->
-<div id="dialog" title="Mappa fermate scuolabus">
-  <div id="busStopsMap" style="width: 600px; height: 450px;" ></div>
-</div>
-<div id="dialog3" title="Mappa fermate scuolabus">
-  <p>La proposta degli alimenti fa riferimento alle “Linee Guida” elaborate dai Servizi Igiene degli Alimenti e della Nutrizione a.s. 2010/2011 delle Aziende per i Servizi Sanitari della Regione Friuli Venezia Giulia.  I prodotti freschi (frutta, verdura, uova, formaggio, carne, affettati) vengono acquistati direttamente da produttori locali</p>
+<div style="display: none;">
+  <div id="dialog" title="Mappa fermate scuolabus">
+    <div id="busStopsMap" style="width: 600px; height: 450px;" ></div>
+  </div>
+  <div id="dialog2" title="Servizio Mensa">
+    <p>La proposta degli alimenti fa riferimento alle “Linee Guida” elaborate dai Servizi Igiene degli Alimenti e della Nutrizione a.s. 2010/2011 delle Aziende per i Servizi Sanitari della Regione Friuli Venezia Giulia.  I prodotti freschi (frutta, verdura, uova, formaggio, carne, affettati) vengono acquistati direttamente da produttori locali</p>
+  </div>
+  <div id="dialog1" title="Servizio di Pre e Post Accoglienza">
+    <p>Pre-accoglienza: dalle ore 7:30 alle ore 9:30
+      <br />
+      Post-accoglienza: dalle ore 16:00 alle ore 17:00.
+      <br />
+      E’ aperto anche ai bambini che non usufruiscono del pulmino.
+      <br />
+      In questa fascia oraria potranno essere organizzati ampliamenti dell’offerta formativa (attività supplementari e corsi)
+    </p>
+  </div>
 </div>
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script>
-  jQuery('#fermateScuolabus').click(function(){
+  jQuery('.fermateScuolabus').click(function(){
     jQuery( "#dialog" ).dialog({
       modal:true,
       width: 640,
-      hright: 450
+      height: 520
     });
   });
 
-  jQuery('#servizioMensa').click(function(){
-    jQuery( "#dialog3" ).dialog();
+  jQuery('.postpreaccoglienza').click(function(){
+    jQuery( "#dialog1" ).dialog({
+        modal: true,
+        width: 500,
+        height:300}
+    );
+  });
+
+  jQuery('.servizioMensa').click(function(){
+    jQuery( "#dialog2" ).dialog({
+      modal: true,
+      width: 500,
+      height:300});
   });
 
   var locations = [

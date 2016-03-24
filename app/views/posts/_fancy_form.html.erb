@@ -1,0 +1,58 @@
+<div class="column dt-sc-three-fourth first contact_form_outer">
+  <%= form_for post, html: {class: "contact-form"} do |f| %>
+      <h2>Inserisci un nuovo post nel blog</h2>
+      <% if post.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+            <ul>
+              <% post.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="field">
+        <%= f.label :autore %><br>
+        <%= f.text_field :autore %>
+      </div>
+      <div class="field">
+        <%= f.label :titolo %><br>
+        <%= text_field_tag 'post[titolo]', '',  placeholder: 'inserisci il titolo' %>
+      </div>
+      <div class="field">
+        <%= f.label :estratto %><br>
+        <%= f.text_field :estratto %>
+      </div>
+      <div class="field">
+        <%= f.label :corpo %><br>
+        <%= text_area_tag 'post[corpo]', "", placeholder: 'inserisci qui il testo da visualizzare direttamente in pagina' %>
+      </div>
+      <div class="field">
+        <%= f.label :esteso %><br>
+        <%= f.text_area :esteso %>
+      </div>
+      <div class="field" style="display: none;">
+        <%= f.date_select :bozza %>
+      </div>
+      <div class="field">
+        <%= f.label :pubblicato %><br>
+        <%= f.date_select :pubblicato %>
+      </div>
+      <div class="field" style="display: none;">
+        <%= f.date_select :cancellato %>
+      </div>
+      <div class="field">
+        <%= f.label :categoria %><br>
+        <%= f.text_field :categoria%>
+      </div>
+      <div class="field">
+        <%= f.hidden_field :tipo %>
+      </div>
+      <div class="dt-sc-hr"> </div>
+      <div class="actions">
+        <%= submit_tag "inserisci post" %>
+      </div>
+  <% end %>
+</div>

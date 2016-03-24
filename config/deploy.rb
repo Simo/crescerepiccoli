@@ -2,7 +2,7 @@
 lock '3.4.0'
 
 set :application, 'crescerepiccoli'
-set :repo_url, 'git@github.com:Simo/crescerepiccoli.git'
+set :repo_url, 'https://github.com/Simo/crescerepiccoli.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
@@ -38,6 +38,6 @@ after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
   task :restart do
-    invoke 'unicorn:reload'
+    invoke 'unicorn:restart'
   end
 end

@@ -1,2 +1,36 @@
-<h1>Comunicazioni#index</h1>
-<p>Find me in app/views/comunicazioni/index.html.erb</p>
+<!--container starts-->
+<div class="container">
+  <!--primary starts-->
+  <section id="primary" class="with-sidebar">
+
+    <div><a id="inserisciNuovoPost" href="#">inserisci un nuovo post</a></div>
+    <div id="inserimentoNuovoPost" style="display: none;">
+      <%= render 'posts/fancy_form', post: @post %>
+    </div>
+
+    <%= render partial: 'post', collection: @posts %>
+
+  </section>
+  <!--primary ends-->
+
+  <%= render 'sidebar' %>
+
+</div>
+<!--container ends-->
+<script type="text/javascript">
+  /*
+   jQuery('#creaNuovoPost').on('click',function(e){
+   e.preventDefault();
+   jQuery.ajax('/posts',{
+   method: 'POST',
+   accepts: "script",
+   data: jQuery('form').serialize()
+   });
+   });
+   */
+  jQuery('#inserisciNuovoPost').on('click',function(e){
+    e.preventDefault();
+    jQuery('#inserimentoNuovoPost').toggle();
+  });
+
+</script>

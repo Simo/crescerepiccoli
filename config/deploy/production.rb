@@ -7,6 +7,7 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
+=begin
 set :port, 22
 set :user, 'deploy'
 set :deploy_via, :remote_cache
@@ -26,6 +27,7 @@ set :ssh_options, {
 
 set :rails_env, :production
 set :conditionally_migrate, true
+=end
 
 # role-based syntax
 # ==================
@@ -64,6 +66,9 @@ role :app, %w{deploy@46.101.247.47}
 #    forward_agent: false,
 #    auth_methods: %w(password)
 #  }
+set :ssh_options, {
+   user: 'deploy'
+  }
 #
 # The server-based syntax can be used to override options:
 # ------------------------------------

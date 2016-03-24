@@ -7,12 +7,36 @@ one:
   corpo: MyText
   esteso: MyText
   bozza: 2016-02-17
-  pubblicato: 2016-02-17
+  pubblicato: 2016-02-12
   cancellato: 2016-02-17
   categoria: MyString
-  tipo: MyString
+  tipo: comitatomamme
 
 two:
+  autore: MyString
+  titolo: MyString
+  estratto: MyString
+  corpo: MyText
+  esteso: MyText
+  bozza: 2016-02-17
+  pubblicato: 2016-02-13
+  cancellato: 2016-02-17
+  categoria: MyString
+  tipo: comitatomamme
+
+three:
+  autore: MyString
+  titolo: MyString
+  estratto: MyString
+  corpo: MyText
+  esteso: MyText
+  bozza: 2016-02-17
+  pubblicato: 2016-02-15
+  cancellato: 2016-02-17
+  categoria: MyString
+  tipo: comitatomamme
+
+four:
   autore: MyString
   titolo: MyString
   estratto: MyString
@@ -22,4 +46,4 @@ two:
   pubblicato: 2016-02-17
   cancellato: 2016-02-17
   categoria: MyString
-  tipo: MyString
+  tipo: comunicazioni

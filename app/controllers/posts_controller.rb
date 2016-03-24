@@ -28,7 +28,12 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html do
+          if @post.tipo == 'comitatomamme'
+            redirect_to comitatomamme_path, notice: 'Il post e\' stato inserito'
+          end
+#{ redirect_to @post, notice: 'Post was successfully created.' }
+        end
         format.json { render :show, status: :created, location: @post }
       else
         format.html { render :new }

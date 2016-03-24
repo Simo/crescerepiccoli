@@ -13,6 +13,9 @@
         <i>0432 987238</i>
         <span class="fa fa-phone"></span>
       </p>
+      <p>
+      <span><a href="/users/sign_in"><%= image_tag 'signin.png' %></a></span>
+      </p>
     </div>
   </div>
   <!--menu-container starts-->
@@ -22,7 +25,9 @@
       <nav id="main-menu">
         <div class="dt-menu-toggle" id="dt-menu-toggle">Menu<span class="dt-menu-toggle-icon"></span></div>
         <ul id="menu-main-menu" class="menu">
-          <%= render @menu_items %>
+          <% @menu_items.each do |menu_item| %>
+            <%= render 'application/menu_item', menu_item: menu_item %>
+          <% end %>
         </ul>
       </nav>
       <!--nav ends-->

@@ -1,0 +1,32 @@
+<div class="dt-sc-one-column">
+  <article class="blog-entry">
+    <div class="blog-entry-inner">
+      <div class="entry-meta">
+        <a href="blog-detail.html" class="blog-author"><img src="images/rounded-bg-img.jpg" alt="" title=""></a>
+        <div class="date">
+          <span> 27 </span>
+          <p> Aug <br> 2014 </p>
+        </div>
+        <a href="#" class="comments">
+          12 <span class="fa fa-comment"> </span>
+        </a>
+        <a href="#" class="entry_format"><span class="fa fa-picture-o"></span></a>
+      </div>
+      <div class="entry-thumb">
+        <a href="blog-detail.html"><img src="images/blog_img1.jpg" alt="" title=""></a>
+      </div>
+      <div class="entry-details">
+        <div class="entry-title">
+          <h3><a href="blog-detail.html"><%= post.titolo %></a></h3>
+        </div>
+        <!--entry-metadata ends-->
+        <div class="entry-body">
+          <p><%= post.estratto%></p>
+        </div>
+        <% if post.esteso != '' %>
+          <a href="blog-detail.html" class="dt-sc-button small"> Continua a leggere <span class="fa fa-chevron-circle-right"> </span></a>
+        <% end %>
+      </div>
+    </div>
+  </article>
+</div>

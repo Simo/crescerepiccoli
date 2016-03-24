@@ -41,5 +41,5 @@ Rails.application.configure do
 
   #config.assets.prefix = "/dev-assets"
   #in produzione deve essere a false per lasciare il compito al webserver
-  config.serve_static_files = false
+  config.serve_static_files = true
 end
