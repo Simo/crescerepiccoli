@@ -3,342 +3,1001 @@
   <data-source name="Rails crescerepiccoli: development" uuid="75f38c5c-3c34-43ed-ad6d-4b0fd3711ea6">
     <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
-    <schema name="" catalog=""/>
-    <table name="breadcrumbs" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="menu_item_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="visible" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="events" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="titolo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="descrizione" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="quando" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="ora" sqlType="TIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="address" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="latitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="longitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="menu_items" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="label" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reference" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="color" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="href" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="pictures" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="name" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="image" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="uploadable_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="uploadable_type" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_pictures_on_uploadable_id_and_uploadable_type" unique="true" columns="uploadable_id,uploadable_type"/>
-    </table>
-    <table name="posts" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="autore" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="titolo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="estratto" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="corpo" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="esteso" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="bozza" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="pubblicato" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="cancellato" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="categoria" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="tipo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="projects" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="author" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="schema_migrations" schema="" catalog="" type="TABLE">
-      <column name="version" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <index name="unique_schema_migrations" unique="true" columns="version"/>
-    </table>
-    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
-      <column name="name" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="seq" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-    </table>
-    <table name="tasks" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="project_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="users" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="email" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="encrypted_password" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="reset_password_token" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reset_password_sent_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="remember_created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="sign_in_count" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="current_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="current_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
-      <index name="index_users_on_email" unique="true" columns="email"/>
-    </table>
+    <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+      <schema id="1">
+        <visible>1</visible>
+      </schema>
+      <table id="2" parent="1" name="breadcrumbs"/>
+      <table id="3" parent="1" name="events"/>
+      <table id="4" parent="1" name="menu_items"/>
+      <table id="5" parent="1" name="pictures"/>
+      <table id="6" parent="1" name="posts"/>
+      <table id="7" parent="1" name="projects"/>
+      <table id="8" parent="1" name="schema_migrations"/>
+      <table id="9" parent="1" name="sqlite_sequence"/>
+      <table id="10" parent="1" name="tasks"/>
+      <table id="11" parent="1" name="users"/>
+      <column id="12" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="13" parent="2" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="14" parent="2" name="menu_item_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="15" parent="2" name="visible">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="16" parent="2" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="17" parent="2" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="18" parent="2">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="19" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="20" parent="3" name="titolo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="21" parent="3" name="descrizione">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="22" parent="3" name="quando">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="23" parent="3" name="ora">
+        <data-type>TIME(0,-1)|12</data-type>
+      </column>
+      <column id="24" parent="3" name="address">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="25" parent="3" name="latitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="26" parent="3" name="longitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="27" parent="3" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="28" parent="3" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="29" parent="3">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="31" parent="4" name="label">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="32" parent="4" name="reference">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="33" parent="4" name="color">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="34" parent="4" name="href">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="35" parent="4" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="36" parent="4" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="37" parent="4" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="38" parent="4" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="39" parent="4">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="41" parent="5" name="name">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="42" parent="5" name="description">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="43" parent="5" name="image">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="44" parent="5" name="uploadable_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="45" parent="5" name="uploadable_type">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="46" parent="5" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="47" parent="5" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="48" parent="5" name="index_pictures_on_uploadable_id_and_uploadable_type">
+        <columns>uploadable_id
+uploadable_type</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="49" parent="5">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="50" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="51" parent="6" name="autore">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="52" parent="6" name="titolo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="53" parent="6" name="estratto">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="54" parent="6" name="corpo">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="55" parent="6" name="esteso">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="56" parent="6" name="bozza">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="57" parent="6" name="pubblicato">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="58" parent="6" name="cancellato">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="59" parent="6" name="categoria">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="60" parent="6" name="tipo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="61" parent="6" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="62" parent="6" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="63" parent="6">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="65" parent="7" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="66" parent="7" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="67" parent="7" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="68" parent="7" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="69" parent="7" name="author">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="70" parent="7" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="71" parent="7" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="72" parent="7" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="73" parent="7" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="74" parent="7" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <key id="75" parent="7">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="76" parent="8" name="version">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <index id="77" parent="8" name="unique_schema_migrations">
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <column id="78" parent="9" name="name">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="79" parent="9" name="seq">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="80" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="81" parent="10" name="project_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="82" parent="10" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="83" parent="10" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="84" parent="10" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="85" parent="10" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="86" parent="10" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="87" parent="10" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="88" parent="10" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="89" parent="10">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="90" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="91" parent="11" name="email">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="92" parent="11" name="encrypted_password">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="93" parent="11" name="reset_password_token">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="94" parent="11" name="reset_password_sent_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="95" parent="11" name="remember_created_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="96" parent="11" name="sign_in_count">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="97" parent="11" name="current_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="98" parent="11" name="last_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="99" parent="11" name="current_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="100" parent="11" name="last_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="101" parent="11" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="102" parent="11" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="103" parent="11" name="index_users_on_email">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="104" parent="11" name="index_users_on_reset_password_token">
+        <columns>reset_password_token</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="105" parent="11">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
   </data-source>
   <data-source name="Rails crescerepiccoli: production" uuid="15ba9724-3a13-4c3f-9883-bd727b264be5">
     <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
-    <schema name="" catalog=""/>
-    <table name="breadcrumbs" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="menu_item_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="visible" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="events" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="titolo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="descrizione" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="quando" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="ora" sqlType="TIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="address" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="latitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="longitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="menu_items" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="label" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reference" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="color" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="href" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="pictures" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="name" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="image" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="uploadable_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="uploadable_type" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_pictures_on_uploadable_id_and_uploadable_type" unique="true" columns="uploadable_id,uploadable_type"/>
-    </table>
-    <table name="projects" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="author" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="schema_migrations" schema="" catalog="" type="TABLE">
-      <column name="version" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <index name="unique_schema_migrations" unique="true" columns="version"/>
-    </table>
-    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
-      <column name="name" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="seq" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-    </table>
-    <table name="tasks" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="project_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="users" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="email" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="encrypted_password" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="reset_password_token" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reset_password_sent_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="remember_created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="sign_in_count" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="current_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="current_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
-      <index name="index_users_on_email" unique="true" columns="email"/>
-    </table>
+    <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+      <schema id="1">
+        <visible>1</visible>
+      </schema>
+      <table id="2" parent="1" name="breadcrumbs"/>
+      <table id="3" parent="1" name="events"/>
+      <table id="4" parent="1" name="menu_items"/>
+      <table id="5" parent="1" name="pictures"/>
+      <table id="6" parent="1" name="projects"/>
+      <table id="7" parent="1" name="schema_migrations"/>
+      <table id="8" parent="1" name="sqlite_sequence"/>
+      <table id="9" parent="1" name="tasks"/>
+      <table id="10" parent="1" name="users"/>
+      <column id="11" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="12" parent="2" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="13" parent="2" name="menu_item_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="14" parent="2" name="visible">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="15" parent="2" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="16" parent="2" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="17" parent="2">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="18" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="19" parent="3" name="titolo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="20" parent="3" name="descrizione">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="21" parent="3" name="quando">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="22" parent="3" name="ora">
+        <data-type>TIME(0,-1)|12</data-type>
+      </column>
+      <column id="23" parent="3" name="address">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="24" parent="3" name="latitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="25" parent="3" name="longitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="26" parent="3" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="27" parent="3" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="28" parent="3">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="30" parent="4" name="label">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="31" parent="4" name="reference">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="32" parent="4" name="color">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="33" parent="4" name="href">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="34" parent="4" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="35" parent="4" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="36" parent="4" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="37" parent="4" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="38" parent="4">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="39" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="40" parent="5" name="name">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="41" parent="5" name="description">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="42" parent="5" name="image">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="43" parent="5" name="uploadable_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="44" parent="5" name="uploadable_type">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="45" parent="5" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="46" parent="5" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="47" parent="5" name="index_pictures_on_uploadable_id_and_uploadable_type">
+        <columns>uploadable_id
+uploadable_type</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="48" parent="5">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="49" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="50" parent="6" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="51" parent="6" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="52" parent="6" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="53" parent="6" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="54" parent="6" name="author">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="55" parent="6" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="56" parent="6" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="57" parent="6" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="58" parent="6" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="59" parent="6" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <key id="60" parent="6">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="61" parent="7" name="version">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <index id="62" parent="7" name="unique_schema_migrations">
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <column id="63" parent="8" name="name">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="64" parent="8" name="seq">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="65" parent="9" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="66" parent="9" name="project_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="67" parent="9" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="68" parent="9" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="69" parent="9" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="70" parent="9" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="71" parent="9" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="72" parent="9" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="73" parent="9" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="74" parent="9">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="75" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="76" parent="10" name="email">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="77" parent="10" name="encrypted_password">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="78" parent="10" name="reset_password_token">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="79" parent="10" name="reset_password_sent_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="80" parent="10" name="remember_created_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="81" parent="10" name="sign_in_count">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="82" parent="10" name="current_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="83" parent="10" name="last_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="84" parent="10" name="current_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="85" parent="10" name="last_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="86" parent="10" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="87" parent="10" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="88" parent="10" name="index_users_on_email">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="89" parent="10" name="index_users_on_reset_password_token">
+        <columns>reset_password_token</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="90" parent="10">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
   </data-source>
   <data-source name="Rails crescerepiccoli: test" uuid="81c08175-7824-457f-92aa-3918b5e7f46f">
     <database-info product="SQLite" version="3.8.9" jdbc-version="2.1" driver-name="SQLiteJDBC" driver-version="native"/>
     <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed"/>
-    <schema name="" catalog=""/>
-    <table name="breadcrumbs" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="menu_item_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="visible" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="events" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="titolo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="descrizione" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="quando" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="ora" sqlType="TIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="address" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="latitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="longitude" sqlType="FLOAT" precision="0" scale="-1" nullable="true" jdbcType="6"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="menu_items" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="label" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reference" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="color" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="href" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="pictures" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="name" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="image" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="uploadable_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="uploadable_type" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_pictures_on_uploadable_id_and_uploadable_type" unique="true" columns="uploadable_id,uploadable_type"/>
-    </table>
-    <table name="posts" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="autore" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="titolo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="estratto" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="corpo" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="esteso" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="bozza" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="pubblicato" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="cancellato" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="categoria" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="tipo" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="projects" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="author" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="priority" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="active" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="schema_migrations" schema="" catalog="" type="TABLE">
-      <column name="version" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <index name="unique_schema_migrations" unique="true" columns="version"/>
-    </table>
-    <table name="sqlite_sequence" schema="" catalog="" type="TABLE">
-      <column name="name" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="seq" sqlType="" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-    </table>
-    <table name="tasks" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="project_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
-      <column name="title" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="description" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="started_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="finished_at" sqlType="DATE" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="notes" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-    </table>
-    <table name="users" schema="" catalog="" type="TABLE">
-      <column name="id" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4"/>
-      <column name="email" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="encrypted_password" sqlType="VARCHAR" precision="0" scale="-1" nullable="false" jdbcType="12" def="Jyc="/>
-      <column name="reset_password_token" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="reset_password_sent_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="remember_created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="sign_in_count" sqlType="INTEGER" precision="0" scale="-1" nullable="false" jdbcType="4" def="MA=="/>
-      <column name="current_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="current_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="last_sign_in_ip" sqlType="VARCHAR" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="false" jdbcType="12"/>
-      <primary-key columns="id"/>
-      <index name="index_users_on_reset_password_token" unique="true" columns="reset_password_token"/>
-      <index name="index_users_on_email" unique="true" columns="email"/>
-    </table>
+    <database-model serializer="dbm" rdbms="SQLITE" format-version="2.6">
+      <schema id="1">
+        <visible>1</visible>
+      </schema>
+      <table id="2" parent="1" name="breadcrumbs"/>
+      <table id="3" parent="1" name="events"/>
+      <table id="4" parent="1" name="menu_items"/>
+      <table id="5" parent="1" name="pictures"/>
+      <table id="6" parent="1" name="posts"/>
+      <table id="7" parent="1" name="projects"/>
+      <table id="8" parent="1" name="schema_migrations"/>
+      <table id="9" parent="1" name="sqlite_sequence"/>
+      <table id="10" parent="1" name="tasks"/>
+      <table id="11" parent="1" name="users"/>
+      <column id="12" parent="2" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="13" parent="2" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="14" parent="2" name="menu_item_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="15" parent="2" name="visible">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="16" parent="2" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="17" parent="2" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="18" parent="2">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="19" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="20" parent="3" name="titolo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="21" parent="3" name="descrizione">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="22" parent="3" name="quando">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="23" parent="3" name="ora">
+        <data-type>TIME(0,-1)|12</data-type>
+      </column>
+      <column id="24" parent="3" name="address">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="25" parent="3" name="latitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="26" parent="3" name="longitude">
+        <data-type>FLOAT(0,-1)|6</data-type>
+      </column>
+      <column id="27" parent="3" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="28" parent="3" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="29" parent="3">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="30" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="31" parent="4" name="label">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="32" parent="4" name="reference">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="33" parent="4" name="color">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="34" parent="4" name="href">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="35" parent="4" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="36" parent="4" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="37" parent="4" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="38" parent="4" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <key id="39" parent="4">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="40" parent="5" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="41" parent="5" name="name">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="42" parent="5" name="description">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="43" parent="5" name="image">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="44" parent="5" name="uploadable_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="45" parent="5" name="uploadable_type">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="46" parent="5" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="47" parent="5" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="48" parent="5" name="index_pictures_on_uploadable_id_and_uploadable_type">
+        <columns>uploadable_id
+uploadable_type</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="49" parent="5">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="50" parent="6" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="51" parent="6" name="autore">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="52" parent="6" name="titolo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="53" parent="6" name="estratto">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="54" parent="6" name="corpo">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="55" parent="6" name="esteso">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="56" parent="6" name="bozza">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="57" parent="6" name="pubblicato">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="58" parent="6" name="cancellato">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="59" parent="6" name="categoria">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="60" parent="6" name="tipo">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="61" parent="6" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="62" parent="6" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="63" parent="6">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="64" parent="7" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="65" parent="7" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="66" parent="7" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="67" parent="7" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="68" parent="7" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="69" parent="7" name="author">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="70" parent="7" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="71" parent="7" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="72" parent="7" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="73" parent="7" name="priority">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="74" parent="7" name="active">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <key id="75" parent="7">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="76" parent="8" name="version">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <index id="77" parent="8" name="unique_schema_migrations">
+        <columns>version</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <column id="78" parent="9" name="name">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="79" parent="9" name="seq">
+        <data-type>(0,-1)|12</data-type>
+      </column>
+      <column id="80" parent="10" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="81" parent="10" name="project_id">
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="82" parent="10" name="title">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="83" parent="10" name="description">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="84" parent="10" name="started_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="85" parent="10" name="finished_at">
+        <data-type>DATE(0,-1)|12</data-type>
+      </column>
+      <column id="86" parent="10" name="notes">
+        <data-type>TEXT(0,-1)|12</data-type>
+      </column>
+      <column id="87" parent="10" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="88" parent="10" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <key id="89" parent="10">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="90" parent="11" name="id">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+      </column>
+      <column id="91" parent="11" name="email">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="92" parent="11" name="encrypted_password">
+        <mandatory>1</mandatory>
+        <data-type>VARCHAR(0,-1)|12</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="93" parent="11" name="reset_password_token">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="94" parent="11" name="reset_password_sent_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="95" parent="11" name="remember_created_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="96" parent="11" name="sign_in_count">
+        <mandatory>1</mandatory>
+        <data-type>INTEGER(0,-1)|4</data-type>
+        <default-expression>0</default-expression>
+      </column>
+      <column id="97" parent="11" name="current_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="98" parent="11" name="last_sign_in_at">
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="99" parent="11" name="current_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="100" parent="11" name="last_sign_in_ip">
+        <data-type>VARCHAR(0,-1)|12</data-type>
+      </column>
+      <column id="101" parent="11" name="created_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <column id="102" parent="11" name="updated_at">
+        <mandatory>1</mandatory>
+        <data-type>DATETIME(0,-1)|12</data-type>
+      </column>
+      <index id="103" parent="11" name="index_users_on_email">
+        <columns>email</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <index id="104" parent="11" name="index_users_on_reset_password_token">
+        <columns>reset_password_token</columns>
+        <desc-columns></desc-columns>
+        <unique>1</unique>
+      </index>
+      <key id="105" parent="11">
+        <columns>id</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
   </data-source>
 </component>

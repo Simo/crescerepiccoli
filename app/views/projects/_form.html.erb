@@ -10,29 +10,39 @@
       </ul>
     </div>
   <% end %>
+    <div class="column dt-sc-one-third first">
+      <div class="field">
+        <%= f.label :title, 'Titolo progetto' %><br>
+        <%= f.text_field :title %>
+      </div>
+    </div>
+    <div class="column dt-sc-two-third">
+      <div class="field">
+        <%= f.label :description, 'Descrizione' %><br>
+        <%= f.text_area :description %>
+      </div>
+    </div>
+    <div class="column dt-sc-one-third first">
+      <div class="field">
+        <%= f.label :started_at, 'Data d\'inizio' %><br>
+        <%= f.date_select :started_at, order: [:day, :month, :year] %>
+      </div>
+    </div>
+    <div class="column dt-sc-one-third">
+      <div class="field">
+        <%= f.label :finished_at, 'Data di fine' %><br>
+        <%= f.date_select :finished_at, order: [:day, :month, :year] %>
+      </div>
+    </div>
+    <div class="column dt-sc-one-third first">
+      <div class="field">
+        <%= f.label :author, 'Referente' %><br>
+        <%= f.text_field :author %>
+      </div>
+    </div>
 
   <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
-  <div class="field">
-    <%= f.label :started_at %><br>
-    <%= f.date_select :started_at %>
-  </div>
-  <div class="field">
-    <%= f.label :finished_at %><br>
-    <%= f.date_select :finished_at %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-    <%= f.label :notes %><br>
+    <%= f.label :notes, 'Note' %><br>
     <%= f.text_area :notes %>
   </div>
     <div>
@@ -42,6 +52,6 @@
       <%= link_to_add_association 'Aggiungi attivita', f, :tasks %>
     </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= submit_tag 'Crea progetto', id: 'creaNuovoProgetto'%>
   </div>
 <% end %>

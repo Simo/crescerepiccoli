@@ -1,4 +1,4 @@
-<div class="column dt-sc-three-fourth first contact_form_outer">
+<div class="column dt-sc-one-column contact_form_outer" style="padding: 5px">
   <%= form_for post, html: {class: "contact-form"} do |f| %>
       <h2>Inserisci un nuovo post nel blog</h2>
       <% if post.errors.any? %>
@@ -52,7 +52,12 @@
       </div>
       <div class="dt-sc-hr"> </div>
       <div class="actions">
-        <%= submit_tag "inserisci post" %>
+        <% if current_breadcrumb 'comunicazioni' %>
+          <%= submit_tag "inserisci post", class: "dt-sc-button" %>
+        <% end %>
+        <% if current_breadcrumb 'comitatomamme' %>
+            <%= submit_tag "inserisci post", class: "dt-sc-button pink" %>
+        <% end %>
       </div>
   <% end %>
 </div>

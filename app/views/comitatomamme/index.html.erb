@@ -3,12 +3,42 @@
   <!--primary starts-->
   <section id="primary" class="with-sidebar">
 
-    <div><a id="inserisciNuovoPost" href="#">inserisci un nuovo post</a></div>
-    <div id="inserimentoNuovoPost" style="display: none;">
-      <%= render 'posts/fancy_form', post: @post %>
-    </div>
+    <div class="dt-sc-one-column">
+      <div><a class="dt-sc-button small pink" id="inserisciNuovoPost" href="#">inserisci un nuovo post</a></div>
+      <div id="inserimentoNuovoPost" style="display: none;">
+        <%= render 'posts/fancy_form', post: @post %>
+      </div>
+      <div class="dt-sc-one-column">
+      <table>
+        <thead>
+        <tr>
+          <th>Autore</th>
+          <th>Titolo</th>
+          <th>Bozza</th>
+          <th>Pubblicato</th>
+          <th>Categoria</th>
+          <th colspan="3"></th>
+        </tr>
+        </thead>
 
-    <%= render partial: 'post', collection: @posts %>
+        <tbody>
+        <% @posts.each do |post| %>
+            <tr>
+              <td><%= post.autore %></td>
+              <td><%= post.titolo %></td>
+              <td><%= post.bozza.to_formatted_s(:rfc822) %></td>
+              <td><%= post.pubblicato.to_formatted_s(:rfc822) %></td>
+              <td><%= post.categoria %></td>
+              <td><%= link_to 'Vedi', post %></td>
+              <td><%= link_to 'Modifica', edit_post_path(post) %></td>
+              <td><%= link_to 'Cancella', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+        <% end %>
+        </tbody>
+      </table>
+      </div>
+      <%= render partial: 'post', collection: @posts %>
+    </div>
 
   </section>
   <!--primary ends-->

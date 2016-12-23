@@ -37,11 +37,20 @@ set :conditionally_migrate, true
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-role :app, %w{deploy@46.101.247.47}
+#role :app, %w{deploy@46.101.247.47}
+#role :web, %w{deploy@46.101.247.47}
+#role :db, %w{deploy@46.101.247.47}
+
+role :app, %w{deploy@138.68.83.25}
+role :web, %w{deploy@138.68.83.25}
+role :db, %w{deploy@138.68.83.25}
+
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
-
+# Define server(s)
+#server '46.101.247.47', user: 'deploy', roles: %w{web}
+server '138.68.83.25', user: 'deploy', roles: %w{web}
 
 # Configuration
 # =============
@@ -67,7 +76,10 @@ role :app, %w{deploy@46.101.247.47}
 #    auth_methods: %w(password)
 #  }
 set :ssh_options, {
-   user: 'deploy'
+    forward_agent: true,
+    auth_methods: %w(password),
+    password: 'deploy',
+    user: 'deploy'
   }
 #
 # The server-based syntax can be used to override options:

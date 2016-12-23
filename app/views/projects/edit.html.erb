@@ -1,6 +1,15 @@
-<h1>Editing Project</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<!--container starts-->
+<div class="container">
+  <!--primary starts-->
+  <div>
+    <%= link_to 'Mostra', @project, class: 'dt-sc-button small pink' %>
+    <%= link_to 'Elenco progetti', projects_path, class: 'dt-sc-button small pink' %>
+  </div>
+  <div class="dt-sc-hr"></div>
+  <section class="content-full-width">
+    <h1>Modifica progetto</h1>
+    <%= render 'form' %>
+  </section>
+  <!--primary ends-->
+</div>
+<!--container ends-->
