@@ -9,7 +9,6 @@ set :deploy_to, '/var/www/crescerepiccoli'
 set :scm, :git
 set :branch, :master
 
-set :group, 'deploy'
 set :rails_env, 'production'
 set :deploy_via, :copy
 # Default branch is :master
@@ -30,30 +29,29 @@ set :log_level, :debug
 # Default value for :pty is false
 # set :pty, true
 
-set :keep_releases, 2
-
 # Default value for :linked_files is []
 set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
 
 # Default value for linked_dirs is []
-#set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
-# set :keep_releases, 5
+set :keep_releases, 5
 
-#after 'deploy:publishing', 'deploy:restart'
+after 'deploy:publishing', 'deploy:restart'
 
-#namespace :deploy do
-#  task :restart do
-#    invoke 'unicorn:restart'
-#  end
-#end
+namespace :deploy do
+  task :restart do
+    invoke 'unicorn:restart'
+  end
+end
 
 #nuovo
 
+=begin
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after 'deploy:publishing', 'deploy:restart'
@@ -64,3 +62,4 @@ task :symlink_config_files do
   run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
   run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/secrets.yml #{ current_path }/config/secrets.yml"
 end
+=end

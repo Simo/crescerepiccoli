@@ -37,20 +37,16 @@ set :conditionally_migrate, true
 # property set. Specify the username and a domain or IP for the server.
 # Don't use `:all`, it's a meta role.
 
-#role :app, %w{deploy@46.101.247.47}
-#role :web, %w{deploy@46.101.247.47}
-#role :db, %w{deploy@46.101.247.47}
-
-role :app, %w{deploy@138.68.83.25}
-role :web, %w{deploy@138.68.83.25}
-role :db, %w{deploy@138.68.83.25}
+role :app, %w{root@46.101.247.47}
+role :web, %w{root@46.101.247.47}
+role :db, %w{root@46.101.247.47}
 
 # role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
 # role :db,  %w{deploy@example.com}
 
 # Define server(s)
-#server '46.101.247.47', user: 'deploy', roles: %w{web}
-server '138.68.83.25', user: 'deploy', roles: %w{web}
+server '46.101.247.47', user: 'root', roles: %w{web}
+#server '138.68.83.25', user: 'deploy', roles: %w{web}
 
 # Configuration
 # =============
@@ -59,8 +55,6 @@ server '138.68.83.25', user: 'deploy', roles: %w{web}
 # For available Capistrano configuration variables see the documentation page.
 # http://capistranorb.com/documentation/getting-started/configuration/
 # Feel free to add new variables to customise your setup.
-
-
 
 # Custom SSH Options
 # ==================
@@ -77,9 +71,7 @@ server '138.68.83.25', user: 'deploy', roles: %w{web}
 #  }
 set :ssh_options, {
     forward_agent: true,
-    auth_methods: %w(password),
-    password: 'deploy',
-    user: 'deploy'
+    user: 'root'
   }
 #
 # The server-based syntax can be used to override options:
