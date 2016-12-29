@@ -10,7 +10,13 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ * NOTA IMPORTANTE
+ * è stato rimosso il tree per un motivo
+ * di incompatibilità con i fogli originali del template
+ *
+ *= require devise
  *= require storia
+ *= require scuola
  *= require documenti
  *= require jquery-ui
  *= require css/style

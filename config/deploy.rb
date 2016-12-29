@@ -41,6 +41,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 # Default value for keep_releases is 5
 set :keep_releases, 5
 
+=begin
 after 'deploy:publishing', 'deploy:restart'
 
 namespace :deploy do
@@ -48,10 +49,10 @@ namespace :deploy do
     invoke 'unicorn:restart'
   end
 end
+=end
 
 #nuovo
 
-=begin
 namespace :deploy do
   after :finishing, 'deploy:cleanup'
   after 'deploy:publishing', 'deploy:restart'
@@ -62,4 +63,3 @@ task :symlink_config_files do
   run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
   run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/secrets.yml #{ current_path }/config/secrets.yml"
 end
-=end

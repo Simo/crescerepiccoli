@@ -1,52 +1,39 @@
-<style>
-  input[type="password"] {
-    font-family: "Bubblegum Sans",cursive;
-    font-weight: normal;
-    background: #ffffff none repeat scroll 0 0;
-    border: 1px solid #eaeaea;
-    border-radius: 2px;
-    color: #a9a7a7;
-    font-size: 16px;
-    outline: medium none;
-    padding: 16px 18px;
-    width: 100%;
-  }
-</style>
 <div class="main">
-<div class="container">
-  <section id="primary" class="content-full-width">
-  <h2>Log in</h2>
-  <div class="column dt-sc-three-fourth first contact_form_outer">
+  <div class="container">
+    <section id="primary" class="content-full-width">
+      <h2>Log in</h2>
+      <div class="column dt-sc-one-column adjusted contact_form_outer">
 
-    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'contact-form'}) do |f| %>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: 'contact-form'}) do |f| %>
 
-      <div class="column dt-sc-one-half first">
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      </div>
-      </div>
-        <div class="column dt-sc-one-half">
-        <div class="field">
-        <%= f.label :password %><br />
-        <%= f.password_field :password, autocomplete: "off" %>
-      </div>
+          <div class="column dt-sc-one-half first">
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
+            </div>
+          </div>
+          <div class="column dt-sc-one-half">
+            <div class="field">
+            <%= f.label :password %><br />
+            <%= f.password_field :password, autocomplete: "off" %>
+            </div>
           </div>
 
-      <%# if devise_mapping.rememberable? -%>
-      <%#    <div class="field">
-      <%#      <%= f.check_box :remember_me %>
-      <%#      <%= f.label :remember_me %>
-      <%#    </div>
-      <% end -%>
-      <div class="actions">
-        <%= f.submit "Log in" %>
-      </div>
-    <% end %>
+          <%# if devise_mapping.rememberable? -%>
+          <%#    <div class="field">
+          <%#      <%= f.check_box :remember_me %>
+          <%#      <%= f.label :remember_me %>
+          <%#    </div>
+          <% end -%>
 
+          <div class="actions">
+            <%= f.submit "Log in" %>
+            <%= render "devise/shared/links" %>
+          </div>
+
+        <% end %>
+      </div>
+    </section>
+    <div class="dt-sc-hr-medium"></div>
   </div>
-  <%= render "devise/shared/links" %>
-</section>
-  <div class="dt-sc-hr-medium"></div>
-</div>
 </div>

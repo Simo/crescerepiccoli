@@ -1,3 +1,13 @@
 // Place all the styles related to the scuola controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.photo-container {
+	border: 1px solid #ddd;
+	padding: 10px;
+	background-color: white;
+}
+
+.photo-container > img {
+	border: 1px solid #eee;
+}
