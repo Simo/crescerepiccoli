@@ -29,9 +29,7 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html do
-          if @post.tipo == 'comitatomamme'
-            redirect_to comitatomamme_path, notice: 'Il post e\' stato inserito'
-          end
+          check_origin @post, 'Il post e\' stato inserito'
 #{ redirect_to @post, notice: 'Post was successfully created.' }
         end
         format.json { render :show, status: :created, location: @post }
@@ -47,7 +45,10 @@ class PostsController < ApplicationController
   def update
     respond_to do |format|
       if @post.update(post_params)
-        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.html do
+          check_origin @post, 'Il post e\' stato aggiornato'
+          #{ redirect_to @post, notice: 'Post was successfully updated.' }
+        end
         format.json { render :show, status: :ok, location: @post }
       else
         format.html { render :edit }
@@ -61,7 +62,10 @@ class PostsController < ApplicationController
   def destroy
     @post.destroy
     respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.html do
+        check_origin @post, 'Il post e\' stato cancellato'
+        #{ redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      end
       format.json { head :no_content }
     end
   end
@@ -76,4 +80,13 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:autore, :titolo, :estratto, :corpo, :esteso, :bozza, :pubblicato, :cancellato, :categoria, :tipo)
     end
+
+  def check_origin post, msg
+    if post.tipo == 'comitatomamme'
+      redirect_to comitatomamme_path, notice: msg
+    end
+    if post.tipo == 'comunicazioni'
+      redirect_to comunicazioni_path, notice: msg
+    end
+  end
 end

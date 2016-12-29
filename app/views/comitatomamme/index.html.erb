@@ -1,7 +1,7 @@
 <!--container starts-->
 <div class="container">
   <!--primary starts-->
-  <section id="primary" class="with-sidebar">
+  <section id="primary" class="content-full-width">
 
     <div class="dt-sc-one-column">
       <div><a class="dt-sc-button small pink" id="inserisciNuovoPost" href="#">inserisci un nuovo post</a></div>
@@ -12,12 +12,12 @@
       <table>
         <thead>
         <tr>
-          <th>Autore</th>
-          <th>Titolo</th>
-          <th>Bozza</th>
-          <th>Pubblicato</th>
-          <th>Categoria</th>
-          <th colspan="3"></th>
+          <th class="header-pink">Autore</th>
+          <th class="header-pink">Titolo</th>
+          <th class="header-pink">Bozza</th>
+          <th class="header-pink">Pubblicato</th>
+          <th class="header-pink">Categoria</th>
+          <th class="header-pink" colspan="3"></th>
         </tr>
         </thead>
 
@@ -26,12 +26,12 @@
             <tr>
               <td><%= post.autore %></td>
               <td><%= post.titolo %></td>
-              <td><%= post.bozza.to_formatted_s(:rfc822) %></td>
-              <td><%= post.pubblicato.to_formatted_s(:rfc822) %></td>
+              <td><%= "#{post.bozza.strftime("%d")}/#{post.bozza.strftime("%m")}/#{post.bozza.strftime("%Y")}" %></td>
+              <td><%= "#{post.pubblicato.strftime("%d")}/#{post.pubblicato.strftime("%m")}/#{post.pubblicato.strftime("%Y")}" %></td>
               <td><%= post.categoria %></td>
-              <td><%= link_to 'Vedi', post %></td>
-              <td><%= link_to 'Modifica', edit_post_path(post) %></td>
-              <td><%= link_to 'Cancella', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to 'Vedi', post, class: "pink-link" %></td>
+              <td><%= link_to 'Modifica', edit_post_path(post), class: "pink-link" %></td>
+              <td><%= link_to 'Elimina', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "pink-link" %></td>
             </tr>
         <% end %>
         </tbody>
@@ -42,8 +42,6 @@
 
   </section>
   <!--primary ends-->
-
-  <%= render 'sidebar' %>
 
 </div>
 <!--container ends-->

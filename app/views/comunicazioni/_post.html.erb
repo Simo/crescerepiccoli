@@ -1,32 +1,42 @@
-<div class="dt-sc-one-column">
-  <article class="blog-entry">
-    <div class="blog-entry-inner">
-      <div class="entry-meta">
-        <a href="blog-detail.html" class="blog-author"></a>
-        <div class="date">
-          <span> 27 </span>
-          <p> Aug <br> 2014 </p>
-        </div>
-        <a href="#" class="comments">
-          12 <span class="fa fa-comment"> </span>
-        </a>
-        <a href="#" class="entry_format"><span class="fa fa-picture-o"></span></a>
+<% unless (post_counter+1) % 2 == 0 %>
+    <div class="column dt-sc-one-half first">
+<% else %>
+    <div class="column dt-sc-one-half">
+<% end %>
+<article class="blog-entry">
+  <div class="blog-entry-inner">
+    <div class="entry-meta">
+      <a href="blog-detail.html" class="blog-author"><img src="http://placehold.it/90x90" alt="" title=""></a>
+      <div class="date">
+        <span> <%= post.pubblicato.strftime("%d") %> </span>
+        <p> <%= post.pubblicato.strftime("%b") %> <br> <%= post.pubblicato.strftime("%Y") %> </p>
       </div>
-      <div class="entry-thumb">
-        <a href="blog-detail.html"><img src="images/blog_img1.jpg" alt="" title=""></a>
-      </div>
-      <div class="entry-details">
-        <div class="entry-title">
-          <h3><a href="blog-detail.html"><%= post.titolo %></a></h3>
-        </div>
-        <!--entry-metadata ends-->
-        <div class="entry-body">
-          <p><%= post.estratto%></p>
-        </div>
-        <% if post.esteso != '' %>
-          <a href="blog-detail.html" class="dt-sc-button small"> Continua a leggere <span class="fa fa-chevron-circle-right"> </span></a>
-        <% end %>
-      </div>
+      <a href="#" class="comments">
+        <%= post.pubblicato.strftime("%I") %> <%= post.pubblicato.strftime("%p") %> <span class="fa fa-clock-o"> </span>
+      </a>
+      <a href="#" class="entry_format"><span class="fa fa-picture-o"></span></a>
     </div>
-  </article>
-</div>
+    <div class="entry-thumb">
+      <%= link_to post do %>
+          <img src="http://placehold.it/1170x711" alt="" title="">
+      <% end %>
+    </div>
+    <div class="entry-details">
+      <div class="entry-title">
+        <h3><%= link_to "#{post.titolo}", post %> </h3>
+      </div>
+      <!--entry-metadata ends-->
+      <div class="entry-body">
+        <p><%= post.estratto %></p>
+      </div>
+      <%- unless post.corpo == ''  %>
+      <a href="<%= "posts/#{post.id}" %>" class="dt-sc-button small"> Leggi tutto <span class="fa fa-chevron-circle-right"> </span></a>
+      <%- end %>
+    </div>
+  </div>
+</article>
+<% unless post_counter % 2 == 0 %>
+    </div>
+<% else %>
+    </div>
+<% end %>

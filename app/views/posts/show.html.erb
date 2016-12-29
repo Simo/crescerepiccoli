@@ -1,54 +1,43 @@
 <p id="notice"><%= notice %></p>
+<%- post = @post%>
+<!--container starts-->
+<div class="container">
+  <!--primary starts-->
+  <section id="primary" class="content-full-width">
 
-<p>
-  <strong>Autore:</strong>
-  <%= @post.autore %>
-</p>
-
-<p>
-  <strong>Titolo:</strong>
-  <%= @post.titolo %>
-</p>
-
-<p>
-  <strong>Estratto:</strong>
-  <%= @post.estratto %>
-</p>
-
-<p>
-  <strong>Corpo:</strong>
-  <%= @post.corpo %>
-</p>
-
-<p>
-  <strong>Esteso:</strong>
-  <%= @post.esteso %>
-</p>
-
-<p>
-  <strong>Bozza:</strong>
-  <%= @post.bozza %>
-</p>
-
-<p>
-  <strong>Pubblicato:</strong>
-  <%= @post.pubblicato %>
-</p>
-
-<p>
-  <strong>Cancellato:</strong>
-  <%= @post.cancellato %>
-</p>
-
-<p>
-  <strong>Categoria:</strong>
-  <%= @post.categoria %>
-</p>
-
-<p>
-  <strong>Tipo:</strong>
-  <%= @post.tipo %>
-</p>
-
+    <article class="blog-entry">
+      <div class="blog-entry-inner">
+        <div class="entry-meta">
+          <a href="#" class="<%= class_for 'blog-author' %>"><img src="http://placehold.it/90x90" alt="" title=""></a>
+          <div class="<%= class_for 'date' %>">
+            <span> <%= post.pubblicato.strftime("%d") %> </span>
+            <p> <%= post.pubblicato.strftime("%b") %> <br> <%= post.pubblicato.strftime("%Y") %> </p>
+          </div>
+          <a href="#" class="<%= class_for 'comments' %>">
+            <%= post.pubblicato.strftime("%I") %> <%= post.pubblicato.strftime("%p") %> <span class="fa fa-clock-o"> </span>
+          </a>
+          <a href="#" class="<%= class_for 'entry_format' %>"><span class="fa fa-picture-o"></span></a>
+        </div>
+        <div class="<%= class_for 'entry-thumb' %>">
+          <a href="#"><img src="http://placehold.it/1170x711" alt="" title=""></a>
+        </div>
+        <div class="<%= class_for 'entry-details' %>">
+          <div class="entry-title">
+            <h3> <%= post.titolo %> </h3>
+          </div>
+          <!--entry-metadata ends-->
+          <div class="entry-body">
+            <p><%= post.corpo %></p>
+            <%- unless post.esteso == '' %>
+            <blockquote class="<%= class_for 'alignright' %>">
+              <q><%= post.esteso %></q>
+            </blockquote>
+            <%- end %>
+          </div>
+        </div>
+      </div>
+    </article>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+  </section>
+</div>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160217211651) do
+ActiveRecord::Schema.define(version: 20161229151232) do
 
   create_table "breadcrumbs", force: :cascade do |t|
     t.string   "title"
@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20160217211651) do
     t.string   "estratto"
     t.text     "corpo"
     t.text     "esteso"
-    t.date     "bozza"
-    t.date     "pubblicato"
-    t.date     "cancellato"
+    t.datetime "bozza"
+    t.datetime "pubblicato"
+    t.datetime "cancellato"
     t.string   "categoria"
     t.string   "tipo"
     t.datetime "created_at", null: false
