@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d0eeab6-2de6-4089-8854-5501f5947f4d" name="Default" comment="impalcatura finale">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/.sprockets-manifest-e9049dfef137ffec6088968f40428a1c.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/application-ef8d1e77a0775931911f232003769f58d5ed79b750b7bf30de34aa1d42d1f65d.css" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb" afterPath="$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb" />
     </list>
     <list id="3871bd83-e8d7-46ab-b650-cf013cce593a" name="New changelist" comment="New changelist" />
     <ignored path="crescerepiccoli.iws" />
@@ -19,9 +21,9 @@
     <SUITE FILE_PATH="coverage/crescerepiccoli@test__crescerepiccoli.coverage" NAME="test: crescerepiccoli Coverage Results" MODIFIED="1449589308063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Production__crescerepiccoli.coverage" NAME="Production: crescerepiccoli Coverage Results" MODIFIED="1482745702900" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@db_seed__crescerepiccoli.coverage" NAME="db:seed: crescerepiccoli Coverage Results" MODIFIED="1449168591008" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@assets_clobber__crescerepiccoli.coverage" NAME="assets:clobber: crescerepiccoli Coverage Results" MODIFIED="1482745496533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy_check__crescerepiccoli.coverage" NAME="deploy:check: crescerepiccoli Coverage Results" MODIFIED="1482745914208" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@assets_precompile.coverage" NAME="assets:precompile Coverage Results" MODIFIED="1482745503255" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@assets_clobber__crescerepiccoli.coverage" NAME="assets:clobber: crescerepiccoli Coverage Results" MODIFIED="1483089832568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy_check__crescerepiccoli.coverage" NAME="deploy:check: crescerepiccoli Coverage Results" MODIFIED="1483088923632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@assets_precompile.coverage" NAME="assets:precompile Coverage Results" MODIFIED="1483089845822" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Rails_console__crescerepiccoli.coverage" NAME="Rails console: crescerepiccoli Coverage Results" MODIFIED="1455421228234" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Run_test__menu_item_test___crescerepiccoli.coverage" NAME="Run test 'menu_item_test': crescerepiccoli Coverage Results" MODIFIED="1449671872179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@routes__crescerepiccoli.coverage" NAME="routes: crescerepiccoli Coverage Results" MODIFIED="1457251469448" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
@@ -34,8 +36,8 @@
     <SUITE FILE_PATH="coverage/crescerepiccoli@assets_clean_keep___crescerepiccoli.coverage" NAME="assets:clean[keep]: crescerepiccoli Coverage Results" MODIFIED="1449169853800" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Run_test__post_test___crescerepiccoli.coverage" NAME="Run test 'post_test': crescerepiccoli Coverage Results" MODIFIED="1456667493880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@assets_precompile__crescerepiccoli.coverage" NAME="assets:precompile: crescerepiccoli Coverage Results" MODIFIED="1456328158312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy__crescerepiccoli.coverage" NAME="deploy: crescerepiccoli Coverage Results" MODIFIED="1482748563303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@Development__crescerepiccoli.coverage" NAME="Development: crescerepiccoli Coverage Results" MODIFIED="1483088232830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy__crescerepiccoli.coverage" NAME="deploy: crescerepiccoli Coverage Results" MODIFIED="1483088938488" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@Development__crescerepiccoli.coverage" NAME="Development: crescerepiccoli Coverage Results" MODIFIED="1483089547866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -64,11 +66,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/orari/index.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="81" column="86" lean-forward="true" selection-start-line="81" selection-start-column="86" selection-end-line="81" selection-end-column="86" />
+            <state relative-caret-position="65">
+              <caret line="73" column="77" lean-forward="false" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_ambiente.html.erb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_aule.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/scuola/_aule.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -101,10 +133,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/scuola/_salone.html.erb" />
         <option value="$PROJECT_DIR$/app/views/scuola/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/scuola/_incipit.html" />
-        <option value="$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb" />
         <option value="$PROJECT_DIR$/app/views/scuola/_incipit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_activities.html.erb" />
         <option value="$PROJECT_DIR$/app/views/servizi/_servizi.html.erb" />
@@ -152,6 +182,8 @@
         <option value="$PROJECT_DIR$/app/views/comunicazioni/_post.html.erb" />
         <option value="$PROJECT_DIR$/app/views/comitatomamme/_post.html.erb" />
         <option value="$PROJECT_DIR$/app/views/orari/index.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/scuola/_aule.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb" />
       </list>
     </option>
   </component>
@@ -305,11 +337,17 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="stylesheets">
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="css">
+            <PATH_ELEMENT USER_OBJECT="crescerepiccoli">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="public">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -323,7 +361,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="vendor">
+            <PATH_ELEMENT USER_OBJECT="public">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -391,25 +429,7 @@
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="helpers">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="crescerepiccoli">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="app">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="controllers">
+            <PATH_ELEMENT USER_OBJECT="assets">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -428,6 +448,10 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
             <PATH_ELEMENT USER_OBJECT="assets">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="images">
               <option name="myItemId" value="" />
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
@@ -476,7 +500,7 @@
       <recent name="$PROJECT_DIR$/app/views/comunicazioni" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: crescerepiccoli">
+  <component name="RunManager" selected="Rake.assets:precompile">
     <configuration default="false" name="db:migrate: crescerepiccoli" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="crescerepiccoli" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -834,7 +858,7 @@
       <workItem from="1482746415993" duration="974000" />
       <workItem from="1482913182640" duration="6834000" />
       <workItem from="1483014599858" duration="22336000" />
-      <workItem from="1483088226715" duration="506000" />
+      <workItem from="1483088226715" duration="1642000" />
     </task>
     <task id="LOCAL-00001" summary="added seeds fro menu, delete unused fonts">
       <created>1448784084778</created>
@@ -984,7 +1008,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69445000" />
+    <option name="totallyTimeSpent" value="70581000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1002,11 +1026,11 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21244635" sideWeight="0.4951049" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4760479" sideWeight="0.5021299" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19957082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19957082" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31799164" sideWeight="0.4978701" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29055008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29009762" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18025751" sideWeight="0.5048951" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1060,20 +1084,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="870">
-          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/initializers/devise.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -1237,6 +1247,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1296,6 +1307,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="507" column="17" lean-forward="false" selection-start-line="507" selection-start-column="17" selection-end-line="507" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1338,13 +1350,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="40" column="21" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="40" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -1427,8 +1432,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/orari/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="81" column="86" lean-forward="true" selection-start-line="81" selection-start-column="86" selection-end-line="81" selection-end-column="86" />
+        <state relative-caret-position="65">
+          <caret line="73" column="77" lean-forward="false" selection-start-line="73" selection-start-column="77" selection-end-line="73" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/scuola/_aule.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="48" lean-forward="false" selection-start-line="2" selection-start-column="48" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/projects/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/scuola/_ambiente.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
           <folding />
         </state>
       </provider>
