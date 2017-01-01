@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
 
-  scope :next_events, -> { where("quando >= ? ", DateTime.now.strftime('%Q') )}
+  scope :next_events, -> { where("quando >= ? ", DateTime.now.to_date )}
 
   geocoded_by :address
 
