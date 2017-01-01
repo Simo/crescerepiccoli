@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161229151232) do
+ActiveRecord::Schema.define(version: 20170101131931) do
 
   create_table "breadcrumbs", force: :cascade do |t|
     t.string   "title"
@@ -50,8 +50,9 @@ ActiveRecord::Schema.define(version: 20161229151232) do
     t.string   "image"
     t.integer  "uploadable_id"
     t.string   "uploadable_type"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "sensible",        default: false
   end
 
   add_index "pictures", ["uploadable_id", "uploadable_type"], name: "index_pictures_on_uploadable_id_and_uploadable_type"

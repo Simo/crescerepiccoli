@@ -1,57 +1,69 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+<div class="column dt-sc-one-half first">
+  <%= form_for(@project) do |f| %>
+      <% if @project.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
 
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+              <% @project.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+              <% end %>
+            </ul>
+          </div>
       <% end %>
-      </ul>
-    </div>
+      <div class="column dt-sc-two-third">
+        <div class="field">
+          <%= f.label :title, 'Titolo progetto' %><br>
+          <%= f.text_field :title %>
+        </div>
+      </div>
+      <div class="column dt-sc-two-third">
+        <div class="field">
+          <%= f.label :author, 'Referente' %><br>
+          <%= f.text_field :author %>
+        </div>
+      </div>
+      <div class="column dt-sc-one-column">
+        <div class="field">
+          <%= f.label :description, 'Descrizione' %><br>
+          <%= f.text_area :description %>
+        </div>
+      </div>
+      <div class="column dt-sc-one-column">
+        <div class="column dt-sc-one-half first">
+          <div class="field">
+            <%= f.label :started_at, 'Data d\'inizio' %><br>
+            <%= f.date_select :started_at, order: [:day, :month, :year] %>
+          </div>
+        </div>
+        <div class="column dt-sc-one-half">
+          <div class="field">
+            <%= f.label :finished_at, 'Data di fine' %><br>
+            <%= f.date_select :finished_at, order: [:day, :month, :year] %>
+          </div>
+        </div>
+      </div>
+      <div class="column dt-sc-one-column">
+        <div class="field">
+          <%= f.label :notes, 'Note' %><br>
+          <%= f.text_area :notes %>
+        </div>
+      </div>
+</div>
+<div class="column dt-sc-one-half">
+      <div class="actions">
+        <%= submit_tag 'Crea progetto', id: 'creaNuovoProgetto', class: "dt-sc-button large" %>
+        <%= link_to 'Indietro', projects_path, class: "dt-sc-button large" %>
+      </div>
+</div>
+<div id="activities-container" class="column dt-sc-one-column">
+  <div class="column dt-sc-one-half first">
+        <div>
+          <%= f.fields_for :tasks do |builder| -%>
+              <%= render 'task_fields', :f => builder %>
+          <% end %>
+          <%= link_to_add_association 'Aggiungi attivita', f, :tasks %>
+        </div>
+  </div>
+</div>
   <% end %>
-    <div class="column dt-sc-one-third first">
-      <div class="field">
-        <%= f.label :title, 'Titolo progetto' %><br>
-        <%= f.text_field :title %>
-      </div>
-    </div>
-    <div class="column dt-sc-two-third">
-      <div class="field">
-        <%= f.label :description, 'Descrizione' %><br>
-        <%= f.text_area :description %>
-      </div>
-    </div>
-    <div class="column dt-sc-one-third first">
-      <div class="field">
-        <%= f.label :started_at, 'Data d\'inizio' %><br>
-        <%= f.date_select :started_at, order: [:day, :month, :year] %>
-      </div>
-    </div>
-    <div class="column dt-sc-one-third">
-      <div class="field">
-        <%= f.label :finished_at, 'Data di fine' %><br>
-        <%= f.date_select :finished_at, order: [:day, :month, :year] %>
-      </div>
-    </div>
-    <div class="column dt-sc-one-third first">
-      <div class="field">
-        <%= f.label :author, 'Referente' %><br>
-        <%= f.text_field :author %>
-      </div>
-    </div>
-
-  <div class="field">
-    <%= f.label :notes, 'Note' %><br>
-    <%= f.text_area :notes %>
-  </div>
-    <div>
-      <%= f.fields_for :tasks do |builder| -%>
-          <%= render 'task_fields', :f => builder %>
-      <% end %>
-      <%= link_to_add_association 'Aggiungi attivita', f, :tasks %>
-    </div>
-  <div class="actions">
-    <%= submit_tag 'Crea progetto', id: 'creaNuovoProgetto'%>
-  </div>
-<% end %>

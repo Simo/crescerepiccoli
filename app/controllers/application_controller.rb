@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def events
-    @events = Event.next_events.limit(2)
+    @selected_events = Event.next_events.limit(2)
   end
 
   def breadcrumbs

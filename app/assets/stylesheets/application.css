@@ -17,6 +17,7 @@
  *= require devise
  *= require storia
  *= require scuola
+ *= require projects
  *= require documenti
  *= require comitatomamme
  *= require posts

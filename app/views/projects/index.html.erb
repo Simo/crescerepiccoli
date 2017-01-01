@@ -44,6 +44,39 @@
 
           <div class="dt-sc-hr"></div>
       <% end %>
+      <div class="dt-sc-one-column">
+        <h1>Listing Projects</h1>
+
+        <table>
+          <thead>
+          <tr>
+            <th>Titolo</th>
+            <th>Descrizione</th>
+            <th>Iniziato</th>
+            <th>Concluso</th>
+            <th>Referente</th>
+            <th>Note</th>
+            <th colspan="3"></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @projects.each do |project| %>
+              <tr>
+                <td><%= project.title %></td>
+                <td><%= project.description %></td>
+                <td><%= project.started_at.strftime("%d/%m/%Y") %></td>
+                <td><%= project.finished_at.strftime("%d/%m/%Y") %></td>
+                <td><%= project.author %></td>
+                <td><%= project.notes %></td>
+                <td><%= link_to 'Dettagli', project %></td>
+                <td><%= link_to 'Modifica', edit_project_path(project) %></td>
+                <td><%= link_to 'Elimina', project, method: :delete, data: { confirm: 'Sei sicuro di voler eliminare il progetto?' } %></td>
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+      </div>
     </section>
     <!--primary ends-->
   </div>
@@ -53,37 +86,4 @@
 
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Projects</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Started at</th>
-      <th>Finished at</th>
-      <th>Author</th>
-      <th>Notes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= project.started_at %></td>
-        <td><%= project.finished_at %></td>
-        <td><%= project.author %></td>
-        <td><%= project.notes %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
 

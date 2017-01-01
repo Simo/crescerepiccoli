@@ -1,17 +1,32 @@
 <fieldset class="nested-fields">
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="column dt-sc-two-third">
+    <div class="field">
+      <%= f.label :name, 'Titolo immagine' %>
+      <%= f.text_field :name %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_field :description %>
+  <div class="column dt-sc-one-column progetti">
+    <div class="field">
+      <%= f.label :description, 'Descrizione' %>
+      <%= f.text_field :description %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :image %><br>
-    <%= f.file_field :image %>
+  <div class="column dt-sc-one-column progetti">
+    <%-  if :name == '' -%>
+      <div class="column dt-sc-one-half first">
+        <div class="field">
+          <%= f.label :image, 'Carica Immagine' %>
+          <%= f.file_field :image %>
+        </div>
+      </div>
+    <%- end -%>
+    <div class="column dt-sc-one-half <%-  unless :name == '' -%>first<%- end -%>">
+      <div class="field">
+        <%= f.check_box :sensible %><%= f.label :sensible, 'L\'immagine contiene volti di bambini' %>
+      </div>
+    </div>
   </div>
   <div>
-    <div><%= link_to_remove_association "Rimuovi immagine", f %></div>
+    <div><%= link_to_remove_association "Rimuovi immagine", f, class: "dt-sc-button small burnt-orange" %></div>
   </div>
 </fieldset>

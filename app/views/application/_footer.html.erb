@@ -9,14 +9,14 @@
         <!--dt-sc-one-half starts-->
         <div class="dt-sc-one-half column first">
           <h2>Prossimi Eventi</h2>
-          <% @events.each do |event| %>
+          <% @selected_events.each do |event| %>
             <%= render 'events', event: event %>
           <% end %>
         </div>
         <!--dt-sc-one-half ends-->
       <div class="column dt-sc-one-fourth">
         <aside class="widget widget_recent_entries">
-          <h3 class="widgettitle green_sketch"> Latest Post </h3>
+          <h3 class="widgettitle green_sketch"> Ultimi articoli </h3>
           <ul>
             <li>
               <a href="">
