@@ -1,55 +1,44 @@
+<div id="main">
 <!--container starts-->
 <div class="container">
   <!--primary starts-->
-  <%= link_to 'Edit', edit_project_path(@project) %> |
-  <%= link_to 'Back', projects_path %>
   <section id="primary" class="content-full-width">
 
-    <p id="notice"><%= notice %></p>
+    <article class="portfolio-single">
+      <div class="column dt-sc-one-column">
+      <div class="column dt-sc-one-third first">
+        <div class="portfolio-slider-container">
+          <ul class="portfolio-slider">
+            <% @project.all_pictures.each do |picture| %>
+                <li> <%= image_tag picture.image.to_s %> </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
 
-    <p>
-      <strong>Title:</strong>
-      <%= @project.title %>
-    </p>
-
-    <p>
-      <strong>Description:</strong>
-      <%= @project.description %>
-    </p>
-
-    <p>
-      <strong>Started at:</strong>
-      <%= @project.started_at %>
-    </p>
-
-    <p>
-      <strong>Finished at:</strong>
-      <%= @project.finished_at %>
-    </p>
-
-    <p>
-      <strong>Author:</strong>
-      <%= @project.author %>
-    </p>
-
-    <p>
-      <strong>Notes:</strong>
-      <%= @project.notes %>
-    </p>
-
-    <p>
-      <strong>Attivita':</strong>
-      <% @project.tasks.each do |task| %>
-        <h2><%= task.title %></h2>
-        <% task.pictures.each do |picture| %>
-            <div>
-              <%= image_tag picture.image.to_s %>
-            </div>
-        <% end %>
-    <% end %>
-    </p>
+      <div class="column dt-sc-two-third">
+        <h2><%= @project.title %></h2>
+        <div class="dt-sc-one-third first">
+        <p><span class="fa fa-calendar"></span> Iniziato: <%= presenta_data_inizio @project.started_at %></p>
+        </div>
+        <div class="dt-sc-one-third">
+        <p><span class="fa fa-calendar"></span> Concluso: <%= presenta_data_conclusione @project %></p>
+        </div>
+        <div class="dt-sc-one-column">
+        <p><%= @project.description %></p>
+        </div>
+      </div>
+      </div><!-- chiude one-column -->
+      <div class="dt-sc-one-column">
+        <div class="project-details">
+          <h2 class="dt-sc-hr-green-title">Attività</h2>
+          <%= render partial: 'task', collection: @project.ordered_tasks %>
+        </div>
+    </div>
+    </article>
 
   </section>
   <!--primary ends-->
 </div>
 <!--container ends-->
+</div>

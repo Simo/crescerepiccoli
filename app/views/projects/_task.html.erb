@@ -1,0 +1,10 @@
+<h2><%= "#{task_counter+1}. #{task.title}" %></h2>
+<p></p>
+<p><span class="fa fa-gift"></span> Category: <a href="#"> Class Activities,</a><a href="#"> Fun</a></p>
+<p><span class="fa fa-location-arrow"></span>Location Info: <a href="#"> Sheridan, </a><a href="#"> Melbourne, </a><a href="#"> Australia</a></p>
+<p><span class="fa fa-calendar"></span>Iniziato: <%= presenta_data_inizio task.started_at %></p>
+<p><span class="fa fa-calendar"></span>Concluso: <%= presenta_data_conclusione task %></p>
+
+
+<h3>Immagini Attività</h3>
+<%= render partial: 'picture', collection: task.pictures %>

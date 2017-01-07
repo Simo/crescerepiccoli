@@ -1,0 +1,30 @@
+<% if picture_counter % 4 == 0 %>
+<div class="dt-sc-one-column">
+<% end %>
+<div class="<%= class_for_activity picture_counter %>">
+  <div class="portfolio-thumb progetti">
+    <img class="item-mask" src="images/portfolio-mask.png" alt="" title="">
+    <%- unless picture.sensible -%>
+        <%= image_tag picture.image.to_s %>
+    <%- else -%>
+        <img src="http://placehold.it/1170x1010" alt="" title="">
+    <%- end -%>
+    <div class="image-overlay">
+      <!--a href="portfolio-detail.html" class="link"><span class="fa fa-link"></span></a-->
+      <%- unless picture.sensible -%>
+          <a href="<%= image_path picture.image.to_s %>" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+      <%- else -%>
+          <a href="http://placehold.it/1170x1010" data-gal="prettyPhoto[gallery]" class="zoom"><span class="fa fa-search"></span></a>
+      <%- end -%>
+    </div>
+  </div>
+  <div class="portfolio-detail">
+    <div class="portfolio-title">
+      <h5><a href="portfolio-detail.html"> <%= picture.name %> </a></h5>
+      <p><%= picture.description %></p>
+    </div>
+  </div>
+</div>
+<% if picture_counter % 4 == 3 %>
+</div>
+<% end %>

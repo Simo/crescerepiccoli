@@ -51,7 +51,6 @@
           <thead>
           <tr>
             <th>Titolo</th>
-            <th>Descrizione</th>
             <th>Iniziato</th>
             <th>Concluso</th>
             <th>Referente</th>
@@ -64,7 +63,6 @@
           <% @projects.each do |project| %>
               <tr>
                 <td><%= project.title %></td>
-                <td><%= project.description %></td>
                 <td><%= project.started_at.strftime("%d/%m/%Y") %></td>
                 <td><%= project.finished_at.strftime("%d/%m/%Y") %></td>
                 <td><%= project.author %></td>

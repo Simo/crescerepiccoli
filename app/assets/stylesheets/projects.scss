@@ -4,13 +4,6 @@
 .field>label {
   font-family: "Bubblegum Sans";
 }
-fieldset {
-  display: block;
-  border-width: 2px;
-  border-style: groove;
-  border-color: threedface;
-  border-image: initial;
-}
 
 .activity-thumb .count{position:relative; left:-30px; top:0px; z-index:9; font-size:16px; color:#FFF; background:#008c99; width:34px; height:50px; line-height:50px; float:left; text-align: center;}
 
@@ -20,4 +13,40 @@ fieldset {
 
 .dt-sc-one-column.progetti {
   width:95%;
+}
+
+legend {
+  padding: 0;
+  display: table;
+}
+fieldset {
+  border: 3px dotted #008c99;
+  padding: 0.01em 0 0 0;
+  margin: 0;
+  min-width: 0;
+}
+
+fieldset.immagini {
+  border: 3px dashed #cf571b;
+  padding: 0.01em 0 0 0;
+  margin: 5%;
+  min-width: 0;
+}
+
+body:not(:-moz-handler-blocked) fieldset {
+  display: table-cell;
+}
+
+.pulsante-cancellazione-img {
+  left: -3px;
+  position: relative;
+  top: -13px;
+}
+
+.dt-sc-one-many{
+  width: 5.8%;
+}
+
+.portfolio.dt-sc-one-fourth .portfolio-thumb {
+  min-height: 182px;
 }
