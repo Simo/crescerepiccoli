@@ -1,5 +1,8 @@
 class Project < ActiveRecord::Base
 
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
+
   has_many :tasks, :dependent => :destroy
   accepts_nested_attributes_for :tasks, allow_destroy: true
 

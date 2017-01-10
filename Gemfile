@@ -40,6 +40,9 @@ gem 'rmagick'
 # Use cocoon gem for complex forms
 gem 'cocoon'
 
+# Use friendly_ids for slugs and optimize seo
+gem 'friendly_id', '~> 5.0.0'
+
 # Use high_voltage for static pages
 gem 'high_voltage', '~> 2.4.0'
 
