@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170101131931) do
+ActiveRecord::Schema.define(version: 20170110104854) do
 
   create_table "breadcrumbs", force: :cascade do |t|
     t.string   "title"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20170101131931) do
     t.string   "tipo"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "slug"
   end
 
   create_table "projects", force: :cascade do |t|
@@ -83,6 +84,14 @@ ActiveRecord::Schema.define(version: 20170101131931) do
     t.datetime "updated_at",  null: false
     t.integer  "priority"
     t.date     "active"
+    t.string   "slug"
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -109,9 +118,11 @@ ActiveRecord::Schema.define(version: 20170101131931) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.integer  "role_id",                default: 1
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["role_id"], name: "index_users_on_role_id"
 
 end
