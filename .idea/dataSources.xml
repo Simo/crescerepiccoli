@@ -5,29 +5,13 @@
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/sqlite-jdbc-3.8.9.jar</url>
-        </library>
-      </libraries>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/crescerepiccoli_development</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Rails crescerepiccoli: production" uuid="15ba9724-3a13-4c3f-9883-bd727b264be5">
       <driver-ref>sqlite.xerial</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/production.sqlite3</jdbc-url>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/sqlite-jdbc-3.8.9.jar</url>
-        </library>
-      </libraries>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/crescerepiccoli_production</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="Rails crescerepiccoli: test" uuid="81c08175-7824-457f-92aa-3918b5e7f46f">
       <driver-ref>sqlite.xerial</driver-ref>
@@ -35,18 +19,16 @@
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
-      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/crescerepiccoli_test</jdbc-url>
       <explain-plan-config>
         <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
       </explain-plan-config>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/xerial-sqlite-license.txt</url>
-        </library>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/sqlite-jdbc-3.8.9.jar</url>
-        </library>
-      </libraries>
+    </data-source>
+    <data-source source="LOCAL" name="crescerepiccoli_development@localhost" uuid="fe7ae9c6-f693-4a96-b643-4b1777e1fe60">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/crescerepiccoli_development</jdbc-url>
     </data-source>
   </component>
 </project>

@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170110104854) do
+ActiveRecord::Schema.define(version: 20170113121754) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "breadcrumbs", force: :cascade do |t|
     t.string   "title"
@@ -55,7 +58,7 @@ ActiveRecord::Schema.define(version: 20170110104854) do
     t.boolean  "sensible",        default: false
   end
 
-  add_index "pictures", ["uploadable_id", "uploadable_type"], name: "index_pictures_on_uploadable_id_and_uploadable_type"
+  add_index "pictures", ["uploadable_id", "uploadable_type"], name: "index_pictures_on_uploadable_id_and_uploadable_type", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "autore"
@@ -87,13 +90,6 @@ ActiveRecord::Schema.define(version: 20170110104854) do
     t.string   "slug"
   end
 
-  create_table "roles", force: :cascade do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
   create_table "tasks", force: :cascade do |t|
     t.integer  "project_id"
     t.string   "title"
@@ -121,8 +117,7 @@ ActiveRecord::Schema.define(version: 20170110104854) do
     t.integer  "role_id",                default: 1
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["role_id"], name: "index_users_on_role_id"
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

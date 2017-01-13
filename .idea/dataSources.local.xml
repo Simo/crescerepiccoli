@@ -15,5 +15,14 @@
       <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
       <auth-required>false</auth-required>
     </data-source>
+    <data-source name="crescerepiccoli_development@localhost" uuid="fe7ae9c6-f693-4a96-b643-4b1777e1fe60">
+      <database-info product="PostgreSQL" version="9.4.4" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.4 JDBC4 (build 1201)">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>sbierti</user-name>
+      <resolve-scope>crescerepiccoli_development:public,sbierti</resolve-scope>
+    </data-source>
   </component>
 </project>
