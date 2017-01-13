@@ -26,7 +26,7 @@
                 <td><%= event.descrizione %></td>
                 <td><%=   Date.strptime((event.quando.to_f / 1000).to_s, '%s').strftime("%d/%m/%Y") %></td>
                 <td><%= "#{event.ora.hour}:#{event.ora.min}" %></td>
-                <td><%= event.address %> <i class="fa fa-map-marker" title="<%= "{ lat: #{event.latitude}, lon: #{event.longitude}}" %>"></i></td>
+                <td><%= event.address %> <a target="_blank" href="<%= "https://www.google.com/maps/place/#{event.latitude}+#{event.longitude}/@#{event.latitude},#{event.longitude},15z" %>"><i class="fa fa-map-marker" title="<%= "{ lat: #{event.latitude}, lon: #{event.longitude}}" %>"></i></a></td>
                 <td><%= link_to 'Show', event %></td>
                 <td><%= link_to 'Edit', edit_event_path(event) %></td>
                 <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -34,11 +34,9 @@
             <% end %>
           </tbody>
         </table>
-
-        <br>
-
-        <%= link_to 'New Event', new_event_path %>
+        <%= link_to 'Nuovo evento', new_event_path %>
       </div>
+      <div class="dt-sc-hr"></div>
     </section>
   </div>
 </div>
