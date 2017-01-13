@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get 'montessori', to: 'montessori#index'
+
   get 'comitatomamme', to: 'comitatomamme#index'
 
   get 'comunicazioni', to: 'comunicazioni#index'

@@ -1,1 +1,8 @@
-<li class="<%= menu_item.color %> <%= current_page menu_item.reference %>"><%= link_to public_send("#{menu_item.href}") do %><%= menu_item.label %><% end %></li>
+<li class="menu-item-simple-parent menu-item-depth-0 <%= menu_item.color %> <%= current_page menu_item.reference %>"><%= link_to public_send("#{menu_item.href}") do %><%= menu_item.label %><% end %>
+  <% if menu_item.reference == 'scuola' %>
+    <ul class="sub-menu">
+      <li> <a href="/storia"> Storia </a> </li>
+    </ul>
+    <a class="dt-menu-expand">+</a>
+  <% end %>
+</li>
