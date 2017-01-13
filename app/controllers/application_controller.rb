@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
   # end
 
   def menu_items
-    @menu_items = MenuItem.all
+    @menu_items = MenuItem.by_priority
   end
 
   def events

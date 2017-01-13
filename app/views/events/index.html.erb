@@ -23,8 +23,8 @@
             <% @events.each do |event| %>
               <tr>
                 <td><%= event.titolo %></td>
-                <td><%= event.descrizione %></td>
-                <td><%=   Date.strptime((event.quando.to_f / 1000).to_s, '%s').strftime("%d/%m/%Y") %></td>
+                <td><%= event.descrizione.html_safe %></td>
+                <td><%= event.quando.strftime("%d/%m/%Y") %></td>
                 <td><%= "#{event.ora.hour}:#{event.ora.min}" %></td>
                 <td><%= event.address %> <a target="_blank" href="<%= "https://www.google.com/maps/place/#{event.latitude}+#{event.longitude}/@#{event.latitude},#{event.longitude},15z" %>"><i class="fa fa-map-marker" title="<%= "{ lat: #{event.latitude}, lon: #{event.longitude}}" %>"></i></a></td>
                 <td><%= link_to 'Show', event %></td>

@@ -1,5 +1,7 @@
 class MenuItem < ActiveRecord::Base
 
+  scope :by_priority, -> { order("priority asc")}
+
   attr_accessor :active
 
   has_one :breadcrumb

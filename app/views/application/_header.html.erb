@@ -2,7 +2,7 @@
 <header>
   <div class="container">
     <div class="logo">
-      <a href="index.html" title="Kids Life"><img src="<%= asset_path 'images/logo.JPG' %>" alt="Kids Life" title="Kids Life"></a>
+      <a href="/" title="Kids Life"><img src="<%= asset_path 'images/logo.JPG' %>" alt="Crescere Piccoli" title="Associazione Crescere Piccoli"></a>
     </div>
     <div class="contact-details">
       <p class="mail">
@@ -14,9 +14,15 @@
         <span class="fa fa-phone"></span>
       </p>
       <p>
-        <a href="/users/sign_in">
-          <i>Login</i>
-          <span class="fa fa-sign-in"></span></a>
+        <% if current_user %>
+          <i><%= current_user.email %></i>
+            <span class="fa fa-user"></span>
+        <% else %>
+          <a href="/users/sign_in">
+            <i>Login</i>
+            <span class="fa fa-sign-in"></span>
+          </a>
+        <% end %>
       </p>
     </div>
   </div>
