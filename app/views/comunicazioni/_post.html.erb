@@ -27,7 +27,7 @@
       </div>
       <!--entry-metadata ends-->
       <div class="entry-body">
-        <p><%= post.estratto %></p>
+        <p><%= post.estratto.html_safe %></p>
       </div>
       <%- unless post.corpo == ''  %>
       <a href="<%= "posts/#{post.id}" %>" class="dt-sc-button small"> Leggi tutto <span class="fa fa-chevron-circle-right"> </span></a>

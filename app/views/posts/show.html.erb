@@ -27,10 +27,10 @@
           </div>
           <!--entry-metadata ends-->
           <div class="entry-body">
-            <p><%= post.corpo %></p>
+            <p><%= post.corpo.html_safe %></p>
             <%- unless post.esteso == '' %>
             <blockquote class="<%= class_for 'alignright' %>">
-              <q><%= post.esteso %></q>
+              <q><%= post.esteso.html_safe %></q>
             </blockquote>
             <%- end %>
           </div>
@@ -40,4 +40,5 @@
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
   </section>
+  <div class="dt-sc-hr-small"></div>
 </div>

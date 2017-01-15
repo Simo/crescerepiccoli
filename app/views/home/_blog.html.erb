@@ -1,67 +1,6 @@
 <!--container starts-->
 <div class="container">
   <h2 class="dt-sc-hr-white-title">Notizie Recenti</h2>
-  <div class="column dt-sc-one-half first">
-    <article class="blog-entry">
-      <div class="blog-entry-inner">
-        <div class="entry-meta">
-          <a href="blog-detail.html" class="blog-author"><img src="<%= asset_path 'images/rounded-bg-img.jpg' %>" alt="" title=""></a>
-          <div class="date">
-            <span> 27 </span>
-            <p> Maggio <br> 2015 </p>
-          </div>
-          <a href="#" class="comments">
-            12 <span class="fa fa-comment"> </span>
-          </a>
-          <a href="#" class="entry_format"><span class="fa fa-picture-o"></span></a>
-        </div>
-        <div class="entry-thumb">
-          <a href="blog-detail.html"><img src="<%= asset_path 'images/blog_img1.jpg' %>" alt="" title=""></a>
-        </div>
-        <div class="entry-details">
-          <div class="entry-title">
-            <h3><a href="blog-detail.html"> Scambio con altre scuole </a></h3>
-          </div>
-          <!--entry-metadata ends-->
-          <div class="entry-body">
-            <p>In settimana abbiamo ospitato i nostri amici della scuola dell'infanzia di Lignano Sabbiadoro</p>
-          </div>
-          <a href="blog-detail.html" class="dt-sc-button small"> Leggi di più <span class="fa fa-chevron-circle-right"> </span></a>
-        </div>
-      </div>
-    </article>
-  </div>
-  <!--dt-sc-one-half ends-->
-  <div class="column dt-sc-one-half">
-    <article class="blog-entry">
-      <div class="blog-entry-inner">
-        <div class="entry-meta">
-          <a href="blog-detail.html" class="blog-author"><img src="<%= asset_path 'images/rounded-bg-img.jpg' %>" alt="" title=""></a>
-          <div class="date">
-            <span> 12 </span>
-            <p> Aprile <br> 2015 </p>
-          </div>
-          <a href="#" class="comments">
-            12 <span class="fa fa-comment"> </span>
-          </a>
-          <a href="#" class="entry_format"><span class="fa fa-picture-o"></span></a>
-        </div>
-        <div class="entry-thumb">
-          <a href="blog-detail.html"><img src="<%= asset_path 'images/blog_img2.jpg' %>" alt="" title=""></a>
-        </div>
-        <div class="entry-details">
-          <div class="entry-title">
-            <h3><a href="blog-detail.html"> Tutti in biblioteca </a></h3>
-          </div>
-          <!--entry-metadata ends-->
-          <div class="entry-body">
-            <p>Un giorno in biblioteca: l'arte della conoscenza, la conoscenza dell'arte</p>
-          </div>
-          <a href="blog-detail.html" class="dt-sc-button small"> Leggi di più <span class="fa fa-chevron-circle-right"> </span></a>
-        </div>
-      </div>
-    </article>
-  </div>
-  <!--dt-sc-one-half ends-->
+  <%= render partial: 'blogpost', collection: @blogposts %>
 </div>
 <!--container ends-->

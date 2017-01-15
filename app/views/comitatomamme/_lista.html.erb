@@ -1,0 +1,27 @@
+<table>
+  <thead>
+  <tr>
+    <th class="header-pink">Autore</th>
+    <th class="header-pink">Titolo</th>
+    <th class="header-pink">Bozza</th>
+    <th class="header-pink">Pubblicato</th>
+    <th class="header-pink">Categoria</th>
+    <th class="header-pink" colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% posts.each do |post| %>
+      <tr>
+        <td><%= post.autore %></td>
+        <td><%= post.titolo %></td>
+        <td><%= "#{post.bozza.strftime("%d")}/#{post.bozza.strftime("%m")}/#{post.bozza.strftime("%Y")}" %></td>
+        <td><%= "#{post.pubblicato.strftime("%d")}/#{post.pubblicato.strftime("%m")}/#{post.pubblicato.strftime("%Y")}" %></td>
+        <td><%= post.categoria %></td>
+        <td><%= link_to 'Vedi', post, class: "pink-link" %></td>
+        <td><%= link_to 'Modifica', edit_post_path(post), class: "pink-link" %></td>
+        <td><%= link_to 'Elimina', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "pink-link" %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,29 @@
+<div class="column dt-sc-one-half<% unless (blogpost_counter+1) % 2 == 0 %> first<% end %>">
+  <article class="blog-entry">
+    <div class="blog-entry-inner">
+      <div class="entry-meta">
+        <a href="blog-detail.html" class="blog-author"><img src="<%= asset_path 'images/rounded-bg-img.jpg' %>" alt="" title=""></a>
+        <div class="date">
+          <span> <%= blogpost.pubblicato.strftime("%d") %> </span>
+          <p> <%= blogpost.pubblicato.strftime("%b") %> <br> <%= blogpost.pubblicato.strftime("%Y") %> </p>
+        </div>
+        <%# render 'blogcomments', blogpost: blogpost %>
+      </div>
+      <div class="entry-thumb">
+        <a href="blog-detail.html"><img src="<%= asset_path 'images/blog_img1.jpg' %>" alt="" title=""></a>
+      </div>
+      <div class="entry-details">
+        <div class="entry-title">
+          <h3><a href="blog-detail.html"> <%= blogpost.titolo %> </a></h3>
+        </div>
+        <!--entry-metadata ends-->
+        <div class="entry-body">
+          <p><%= blogpost.estratto.html_safe %></p>
+        </div>
+        <%= link_to blogpost do %>
+          <div class="dt-sc-button small"> Leggi di più <span class="fa fa-chevron-circle-right"> </span></div>
+        <% end%>
+      </div>
+    </div>
+  </article>
+</div>

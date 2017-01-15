@@ -8,7 +8,7 @@
       <div class="container">
         <!--dt-sc-one-half starts-->
         <div class="dt-sc-one-half column first">
-          <h2>Prossimi Eventi <% if current_user && current_user.role_id == 1 %><a href="/eventi"><span class="fa fa-calendar-plus-o"></span></a><% end %></h2>
+          <h2>Prossimi Eventi <% if current_user && current_user.role_id > 1 %><a href="/eventi"><span class="fa fa-calendar-plus-o"></span></a><% end %></h2>
           <% @selected_events.each do |event| %>
             <%= render 'events', event: event %>
           <% end %>
@@ -18,27 +18,7 @@
         <aside class="widget widget_recent_entries">
           <h3 class="widgettitle green_sketch"> Ultimi articoli </h3>
           <ul>
-            <li>
-              <a href="">
-                <img src="<%= asset_path 'images/blog_list1.jpg' %>" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
-            <li>
-              <a href="">
-                <img src="<%= asset_path 'images/blog_list2.jpg' %>" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
-            <li>
-              <a href="">
-                <img src="<%= asset_path 'images/blog_list3.jpg' %>" alt="" title="">
-              </a>
-              <h6><a href=""> Amazing post with all  goodies </a></h6>
-              <span> March 23, 2014 </span>
-            </li>
+            <%= render partial: 'latestpost', collection: @latestposts %>
           </ul>
         </aside>
       </div>

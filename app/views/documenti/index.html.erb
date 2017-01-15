@@ -4,76 +4,51 @@
   <section id="primary" class="content-full-width">
 
     <!--dt-sc-one-half starts-->
-    <div class="dt-sc-one-half column first">
+    <div class="dt-sc-one-column column">
       <div>
         <ul class='dt-sc-testimonial-carousel'>
-          <li>
-            <div class='dt-sc-testimonial'>
-              <blockquote class="burnt-orange"><q>È lo strumento attraverso il quale la scuola rende trasparente e leggibile ciò che fa, come lo fa e perché contiene le scelte culturali, educative, didattiche e organizzative, espressione dell’autonomia progettuale e dell’assunzione di responsabilità della scuola</q></blockquote>
-              <div class='author'>
-                <a href="documenti/POF_TRIENNALE_DEFINITIVO_2015-2018.pdf"><img src="images/pdfs.png" alt="" title="" /></a>
-              </div>
-              <div class="author-meta">
-                <p> Piano di Offerta Formativa </p>
-                <span>POF triennale</span>
-                <span class="author-rating rating-4"></span>
-              </div>
-            </div>
-          </li>
-          <div class="dt-sc-hr"></div>
-          <li>
-            <div class='calendario-menu dt-sc-testimonial'>
-              <blockquote class="green"><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehiculaest, in consequat. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.</q></blockquote>
-              <div class='author'>
-                <a href="documenti/calendariomenu.xlsx"><img src="images/xlss.png" alt="" title="" /></a>
-              </div>
-              <div class="author-meta">
-                <p> Calendario del men&uacute; </p>
-                <span>Divisione settiamale del calendario scolatistico</span>
-                <span class="author-rating rating-4"></span>
-              </div>
-            </div>
-          </li>
+          <div class="dt-sc-one-third column first">
+            <li>
+              <%= render 'regolamento' %>
+            </li>
+          </div>
+          <div class="dt-sc-one-third column">
+            <li>
+              <%= render 'iscrizione' %>
+            </li>
+          </div>
+          <div class="dt-sc-one-third column">
+            <li>
+              <%= render 'offertaformativa' %>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
-    <!--dt-sc-one-half ends-->
-    <!--dt-sc-one-half starts-->
-    <div class="dt-sc-one-half column">
-      <div >
+    <!--first dt-sc-one-third ends-->
+    <!--second dt-sc-one-third starts-->
+    <div class="dt-sc-one-column column">
+      <div>
         <ul class='dt-sc-testimonial-carousel'>
+          <div class="dt-sc-one-third column first">
           <li>
-            <div class='dt-sc-testimonial'>
-              <blockquote class="blue"><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehiculaest, in consequat. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.</q></blockquote>
-              <div class='author'>
-                <a href="documenti/letterauscitebimbi.docx"><img src="images/docs.png" alt="" title="" /></a>
-              </div>
-              <div class="author-meta">
-                <p> Lettera Uscita Pomeridiana</p>
-                <span>Foglio da stampare e compilare</span>
-                <span class="author-rating rating-4"></span>
-              </div>
-            </div>
+            <%= render 'letterauscita' %>
           </li>
-          <div class="dt-sc-hr"></div>
+          </div>
+          <div class="dt-sc-one-third column">
           <li>
-            <div class='dt-sc-testimonial'>
-              <blockquote class="green"><q>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehiculaest, in consequat. Donec hendrerit vehicula est, in consequat. Donec hendrerit vehicula est, in consequat.</q></blockquote>
-              <div class='author'>
-                <a href="documenti/menu.xlsx"><img src="images/xlss.png" alt="" title="" /></a>
-              </div>
-              <div class="author-meta">
-                <p> Men&uacute;  </p>
-                <span>Piano settimanale del men&uacute; </span>
-                <span class="author-rating rating-4"></span>
-              </div>
-            </div>
+            <%= render 'menu' %>
           </li>
+          </div>
+          <div class="dt-sc-one-third column">
+            <li>
+              <%= render 'calendariomenu' %>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
     <!--dt-sc-one-half ends-->
-    <div class="dt-sc-hr"></div>
 
   </section>
   <!--primary ends-->

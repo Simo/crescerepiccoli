@@ -30,6 +30,9 @@
       In questa fascia oraria potranno essere organizzati ampliamenti dell’offerta formativa (attività supplementari e corsi)
     </p>
   </div>
+	<div id="dialog3" title="Servizio Nanna">
+		<p>La sala della nanna è un luogo dove i bambini ritrovano la loro brandina e il loro pupazzo, che attraverso un momento rituale e rilassante permette loro di fare la nanna in un ambiente caldo e affettuoso.</p><p>I bambini al momento della nanna possono tenersi vicini piccoli oggetti personali che permette loro di ritrovare un po’ del loro ambiente famigliare.</p>
+	</div>
 </div>
 <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 <script>
@@ -51,6 +54,13 @@
 
   jQuery('.servizioMensa').click(function(){
     jQuery( "#dialog2" ).dialog({
+      modal: true,
+      width: 500,
+      height:300});
+  });
+
+	jQuery('.servizioNanna').click(function(){
+    jQuery( "#dialog3" ).dialog({
       modal: true,
       width: 500,
       height:300});
