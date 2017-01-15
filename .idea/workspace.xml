@@ -2,24 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d0eeab6-2de6-4089-8854-5501f5947f4d" name="Default" comment="impalcatura finale">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/appuntamento_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/appuntamento_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/apreleporte.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/bg2_scuoleaperte.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/boom2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/e.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/images/layerslider-gallery/asiloartegna/tiaspettiamo.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/menu_item.rb" afterPath="$PROJECT_DIR$/app/models/menu_item.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_events.html.erb" afterPath="$PROJECT_DIR$/app/views/application/_events.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_footer.html.erb" afterPath="$PROJECT_DIR$/app/views/application/_footer.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/application/_header.html.erb" afterPath="$PROJECT_DIR$/app/views/application/_header.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/events/index.html.erb" afterPath="$PROJECT_DIR$/app/views/events/index.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/_slider.html.erb" afterPath="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
     </list>
     <list id="3871bd83-e8d7-46ab-b650-cf013cce593a" name="New changelist" comment="New changelist" />
     <ignored path="crescerepiccoli.iws" />
@@ -53,8 +37,8 @@
     <SUITE FILE_PATH="coverage/crescerepiccoli@db_rollback__crescerepiccoli.coverage" NAME="db:rollback: crescerepiccoli Coverage Results" MODIFIED="1483276902393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Run_test__post_test___crescerepiccoli.coverage" NAME="Run test 'post_test': crescerepiccoli Coverage Results" MODIFIED="1456667493880" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@assets_precompile__crescerepiccoli.coverage" NAME="assets:precompile: crescerepiccoli Coverage Results" MODIFIED="1456328158312" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
-    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy__crescerepiccoli.coverage" NAME="deploy: crescerepiccoli Coverage Results" MODIFIED="1484310281661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
     <SUITE FILE_PATH="coverage/crescerepiccoli@Development__crescerepiccoli.coverage" NAME="Development: crescerepiccoli Coverage Results" MODIFIED="1484317605646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
+    <SUITE FILE_PATH="coverage/crescerepiccoli@deploy__crescerepiccoli.coverage" NAME="deploy: crescerepiccoli Coverage Results" MODIFIED="1484319025864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="crescerepiccoli" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -97,73 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_header.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_slider.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="547">
-              <caret line="53" column="166" lean-forward="false" selection-start-line="53" selection-start-column="166" selection-end-line="53" selection-end-column="166" />
-              <folding>
-                <element signature="n#style#0;n#img#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/sessions/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="113" lean-forward="true" selection-start-line="6" selection-start-column="82" selection-end-line="6" selection-end-column="113" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="32" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="36" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="129" lean-forward="true" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="129" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="128" lean-forward="false" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="128" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="417">
+              <caret line="43" column="98" lean-forward="false" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -251,11 +173,11 @@
         <option value="$PROJECT_DIR$/app/views/application/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/models/menu_item.rb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/application/_header.html.erb" />
         <option value="$PROJECT_DIR$/app/views/home/_slider.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/application/_header.html.erb" />
       </list>
     </option>
   </component>
@@ -274,8 +196,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="1824" />
-    <option name="height" value="1103" />
+    <option name="width" value="1440" />
+    <option name="height" value="804" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -532,7 +454,7 @@
       <recent name="$PROJECT_DIR$/app/assets/fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: crescerepiccoli">
+  <component name="RunManager" selected="Capistrano.deploy: crescerepiccoli">
     <configuration default="false" name="deploy:migrate: crescerepiccoli" type="CapistranoRunConfigurationType" factoryName="Capistrano" temporary="true">
       <module name="crescerepiccoli" />
       <CAPISTRANO_RUN_CONFIGURATION NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -967,7 +889,7 @@
       <workItem from="1484044974959" duration="1474000" />
       <workItem from="1484055052994" duration="2335000" />
       <workItem from="1484141189693" duration="10128000" />
-      <workItem from="1484295761000" duration="12939000" />
+      <workItem from="1484295761000" duration="14002000" />
     </task>
     <task id="LOCAL-00001" summary="added seeds fro menu, delete unused fonts">
       <created>1448784084778</created>
@@ -1117,7 +1039,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154701000" />
+    <option name="totallyTimeSpent" value="155764000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1129,17 +1051,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1824" height="1103" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1440" height="804" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23512907" sideWeight="0.4951049" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29971388" sideWeight="0.4951049" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32914925" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23115079" sideWeight="0.50448936" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34006733" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286908" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23115079" sideWeight="0.49551067" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32863188" sideWeight="0.49551067" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2847222" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28349787" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18025751" sideWeight="0.5048951" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1587,21 +1509,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        <state relative-caret-position="75">
+          <caret line="5" column="129" lean-forward="true" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="129" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="53" column="166" lean-forward="false" selection-start-line="53" selection-start-column="166" selection-end-line="53" selection-end-column="166" />
-          <folding>
-            <element signature="n#style#0;n#img#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="128" lean-forward="false" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="128" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="8" lean-forward="true" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1621,26 +1549,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/home/_slider.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="129" lean-forward="true" selection-start-line="5" selection-start-column="106" selection-end-line="5" selection-end-column="129" />
-          <folding />
+        <state relative-caret-position="592">
+          <caret line="53" column="166" lean-forward="false" selection-start-line="53" selection-start-column="166" selection-end-line="53" selection-end-column="166" />
+          <folding>
+            <element signature="n#style#0;n#img#1;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/application/_header.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="128" lean-forward="false" selection-start-line="5" selection-start-column="128" selection-end-line="5" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="417">
+          <caret line="43" column="98" lean-forward="false" selection-start-line="43" selection-start-column="98" selection-end-line="43" selection-end-column="98" />
           <folding />
         </state>
       </provider>
