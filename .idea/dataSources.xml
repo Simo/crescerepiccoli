@@ -2,19 +2,41 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="Rails crescerepiccoli: development" uuid="75f38c5c-3c34-43ed-ad6d-4b0fd3711ea6">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>96ccbd49-aa16-40cf-8668-679bb6ea25d9</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/crescerepiccoli_development</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
+      </explain-plan-config>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-9.4-1201.jdbc4.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-driver-license.txt</url>
+        </library>
+      </libraries>
     </data-source>
     <data-source source="LOCAL" name="Rails crescerepiccoli: production" uuid="15ba9724-3a13-4c3f-9883-bd727b264be5">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>96ccbd49-aa16-40cf-8668-679bb6ea25d9</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/crescerepiccoli_production</jdbc-url>
+      <explain-plan-config>
+        <provider>com.intellij.database.plan.postgres.PostgresExplainPlanProvider</provider>
+      </explain-plan-config>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-9.4-1201.jdbc4.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-driver-license.txt</url>
+        </library>
+      </libraries>
     </data-source>
     <data-source source="LOCAL" name="Rails crescerepiccoli: test" uuid="81c08175-7824-457f-92aa-3918b5e7f46f">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>96ccbd49-aa16-40cf-8668-679bb6ea25d9</driver-ref>
       <synchronize>true</synchronize>
       <imported>true</imported>
       <remarks>$PROJECT_DIR$/config/database.yml</remarks>
@@ -23,6 +45,14 @@
       <explain-plan-config>
         <provider>com.intellij.database.plan.ExplainPlanProvider.NullExplainPlanProvider</provider>
       </explain-plan-config>
+      <libraries>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-9.4-1201.jdbc4.jar</url>
+        </library>
+        <library>
+          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/PostgreSQL/9.4-1201/postgresql-driver-license.txt</url>
+        </library>
+      </libraries>
     </data-source>
     <data-source source="LOCAL" name="crescerepiccoli_development@localhost" uuid="fe7ae9c6-f693-4a96-b643-4b1777e1fe60">
       <driver-ref>postgresql</driver-ref>
